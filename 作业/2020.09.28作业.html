@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="wigth=device-width,initial-scale=1.0">
+  <title>homework</title>
+</head>
+<body>
+  <h1>Lorem</h1>
+  <h3>Lorem ipsum</h3>
+  <h5>Lorem ipsum doctor</h5>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates amet aut magni a, obcaecati natus adipisci commodi? Vitae asperiores ipsum amet enim at corporis provident nesciunt culpa aliquam minima. Blanditiis.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, dolores quos vel asperiores repellendus ad accusamus eveniet commodi, explicabo incidunt eos nisi perferendis facilis molestias maxime eaque provident, necessitatibus similique.</p>
+  <a href="https://www.jd.com" target="_blank">在新网页打开京东</a>
+  <a href="mailto:913166@qq.com">点击给我发送邮箱</a>
+  <a href="#footer">跳转到页面底部</a>
+  <a href="xxx.php" download="download">点我下载一个文件</a> <br>
+  <a href="https://www.baidu.com"><img src="putao.jpg" alt="putao" title="yammy" width="200" height="200"></a>
+
+  <hr />
+  <hr />
+
+  <marquee behavior="" direction="">飘~~~</marquee>
+  <em>这几种强调</em>
+  <strong>有什么</strong>
+  <b>区别呢</b>
+  <u>这个呢?</u>
+  <i>这个呢?</i>
+  <p>&lt;!--这段注释需要出现页面里--></p>
+  <p>html注释怎么写?</p>
+  <p>下面是一段javascript代码,最适合用何种标签表示呢?</p>
+  <pre>
+    <code>
+      function a(){
+        return 8
+      }
+    </code>
+  </pre>
+  <hr>
+  <ul>
+    <li>小学
+      <ol>
+        <li>一年级
+          <ol>
+            <li>上学期</li>
+            <li>下学期</li>
+          </ol>
+        </li>
+        <li>二年级</li>
+        <li>三年级</li>
+      </ol>
+    </li>
+    <li>中学</li>
+    <li>大学</li>
+  </ul>
+  <hr />
+  <dl>
+    <dt>班级</dt>
+    <dd>三年二班</dd>
+  </dl>
+  <dl>
+    <dt>老师</dt>
+    <dd>张老师</dd>
+    <dd>李老师</dd>
+    <dd>王老师</dd>
+  </dl>
+  <dl>
+    <dt>学生</dt>
+    <dd>小明</dd>
+    <dd>豆豆</dd>
+  </dl>
+
+  <hr />
+
+  <h3>Google搜索</h3>
+  <form action="https://www.google.com.hk/search">
+    <input placeholder="请输入想要搜索的内容" type="text" name="q" required>
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="hidden" name="sourceid" value="chrome">
+    <button>在新窗口打开搜索结果</button>
+  </form>
+  <hr /> 
+
+  <form action="xxx.php" method="POST" name="info">
+  <h4>个人信息调查表</h4>
+  <dl>
+    <dt>性别</dt>
+    <dd>  
+      <input type="radio" name="sex"  value="male" checked="checked" id="nan"> 
+      <label for="nan">男</label>
+      <input type="radio" name="sex"  value="female" checked="checked" id="nv"> <label for="nv">女</label>
+    </dd>
+  </dl>
+  <dl>
+    <dt>年龄</dt>
+    <dd>
+      <select name="age" size="3">
+        <option value="" hidden="hidden" selected="selected">请选择</option>
+        <optgroup label="少年"></optgroup>
+        <option value="">1-6岁</option>
+        <option value="">6-12岁</option>
+        <optgroup  label="青年"></optgroup>
+        <option value="">13-15岁</option>
+        <option value="">16-18岁</option>
+        <optgroup label="壮年"></optgroup>
+        <option value="">18-22岁</option>
+        <option value="">23-30岁</option>
+      </select>
+    </dd>
+  </dl>
+  <dl>
+    <dt>生日</dt>
+    <dd><input type="date" name="" id=""></dd>
+  </dl>
+  <dl>
+    <dt>生辰</dt>
+    <dd><input type="time" name="" id=""></dd>
+  </dl>
+  <dl>
+    <dt>照片</dt>
+    <dd><label for="text"><input type="file" hidden="hidden" id="text">点我上传照片,我比文件上传按钮好看</label></dd>
+  </dl>
+  <dl>
+    <dt>肤色</dt>
+    <dd><input type="color" name="" id=""></dd>
+  </dl>
+  <dl>
+    <dt>自我介绍</dt>
+    <dd>  <textarea name="self-introdution" id="" cols="30" rows="10">&lt;/textarea></textarea>
+    </dd>
+  </dl>
+
+<fieldset>
+  <legend>这些都是禁止的</legend>
+  <input type="text" name="" id="">
+  <input type="text" name="" id="">
+  <input type="text" name="" id="">
+  <input type="text" name="" id="">
+</fieldset>
+<input type="submit" name="" value="提交">
+<input type="reset" name="" value="重置">
+</form>
+
+<hr />
+<table border="1" cellspacing="0" cellspadding="" >
+  <caption>货品列表</caption>
+  <col>
+  <col bgcolor="red">
+  <col>
+  <col bgcolor="pink">
+  <tr>
+    <td>货号</td>
+    <td>品名</td>
+    <td>进价</td>
+    <td>出价</td>
+  </tr>
+  <tr>
+    <td>001</td>
+    <td>苹果</td>
+    <td rowspan="2">5</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>002</td>
+    <td>橘子</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>003</td>
+    <td>香蕉</td>
+    <td>5</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>004</td>
+    <td>山竹</td>
+    <td>5</td>
+    <td>8</td>
+  </tr>
+</table>
+
+<hr />
+
+<img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" alt="maotouying" title="猫头鹰也是miao" width="300" usemap="#map1">
+<map name="map1">
+  <area shape="rec" coords="54,80,200,180" href="https://www.baidu.com" alt="miaotouying" title="">
+  <area shape="circle" coords="130,260,80" href="" alt="miaotouying" title="">
+  <area shape="polygon" coords="54,80,24,280,170,387,225,253,200,83" href="" alt="" title="">
+</map>
+
+<hr>
+
+<div>
+  怎样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这两个字中间怎么空这么大呢?
+  <p>怎么在页面中显示下面内容呢?</p>
+  &lt;span>&lt;/span&gt;
+</div>
+
+
+
+  <p id="footer"></p>
+</body>
+</html>
