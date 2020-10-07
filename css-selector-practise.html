@@ -6,16 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>css practise</title>
   <style>
+    .a:focus {
+      color: blue;
+    }
+
+    .a:hover {
+      color: red;
+    }
+
+    .a:active {
+      color: green;
+    }
+
+    .b span:focus {
+      color: blue;
+    }
+
     .b span:hover {
       color: red;
     }
 
     .b span:active {
       color: green;
-    }
-
-    .b span:focus {
-      color: blue;
     }
 
     a {
@@ -30,18 +42,26 @@
       color: pink;
     }
 
-    a:nth-child(5),
+    /* a:nth-child(5),
     a:nth-child(6) {
       color: skyblue;
+    } */
+    a[ herf^="mailto:"i] {
+      color: blue;
     }
+
+    /* 属性选择器 前缀为mailto:  i不区分大小写 */
 
     a:nth-child(7),
     a:nth-child(8) {
       color: yellow;
     }
 
-    a:nth-child(9),
+    /* a:nth-child(9),
     a:nth-child(10) {
+      font-size: 30px;
+    } */
+    a[href$=".pdf"] {
       font-size: 30px;
     }
 
@@ -60,7 +80,8 @@
       color: green;
     }
 
-    .c>ul>li:nth-child(-n+35):nth-child(-n+50) {
+    /* 交集选择器 没有空格 */
+    .c>ul>li:nth-child(n+35):nth-child(-n+50) {
       color: blue;
     }
 
@@ -79,7 +100,7 @@
 <body>
   <p>红色</p>
   <p class="a" tabindex="-1">鼠标悬浮时为红色,按下时为绿色,获取焦点时为蓝色</p>
-  <p class="b">
+  <p class="b" tabindex="-1">
     <span>红色</span>
     <span>绿色</span>
     <span>蓝色</span>
