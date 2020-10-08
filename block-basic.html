@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>block-basic</title>
+  <style>
+    .a {
+      background-color: red;
+      min-width: 600px;
+      margin: 20px;
+    }
+
+    .a section {
+      width: 600px;
+      margin: auto;
+    }
+
+    .b {
+      width: 580px;
+      margin: 20px auto;
+      padding: 0 10px;
+      border: 2px solid #000;
+      /* box-sizing: border-box; */
+    }
+
+    .b .one,
+    .b .two {
+      height: 60px;
+      margin: 20px 0;
+      overflow: auto scroll;
+    }
+
+    p {
+      height: 50px;
+      background-color: violet;
+    }
+
+    p:hover {
+      margin-left: -10px;
+      margin-right: -10px;
+      /* background-color: violet; */
+      /* transition: ease-in-out 0.3s; */
+    }
+
+    .sanjiao {
+      height: 0;
+      width: 0;
+      border: 50px solid transparent;
+      border-bottom-color: orange;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="a">
+    <section>aaaa</section>
+  </div>
+  <div class="b">
+    <div class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt, accusamus neque
+      fugiat sunt qui officiis vero in, aliquid modi ab nobis rem cum facilis maxime laboriosam assumenda explicabo
+      dolor.
+    </div>
+    <p></p>
+    <div class="two">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores, sunt sapiente necessitatibus repudiandae
+      optio perferendis reiciendis non nostrum, aspernatur pariatur facilis commodi cupiditate consequatur, fugiat porro
+      illo aliquam omnis?
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum totam nulla tenetur illo atque fugit,
+      doloribus
+      quasi accusamus eius perferendis iste aliquid magnam corporis voluptatem pariatur sapiente aliquam architecto?
+    </div>
+  </div>
+  <div class="sanjiao"></div>
+</body>
+
+</html>
