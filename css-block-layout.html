@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css block layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #000;
+      min-width: 800px;
+    }
+
+    div {
+      max-width: 600px;
+      color: #fff;
+      margin: 0 auto;
+    }
+
+    main {
+      width: 600px;
+      margin: auto;
+      padding-top: 16px;
+    }
+
+    main ul {
+      margin-top: 30px;
+    }
+
+    main .block li {
+      box-sizing: border-box;
+      list-style: none;
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      text-align: center;
+      line-height: 34px;
+      margin: 15px 0;
+      background-color: pink;
+    }
+
+    main .block li:hover {
+      background-color: #e70000;
+    }
+
+    main .block li:nth-child(n+5) {
+      margin-left: 210px;
+    }
+
+    main .block li:nth-child(n+9) {
+      margin-left: 420px;
+    }
+
+    main .block li:nth-child(4n) {
+      margin-bottom: -220px;
+    }
+
+    main .block li:last-child {
+      margin-bottom: 30px;
+    }
+
+    main>section {
+      border-bottom: 1px dashed;
+    }
+
+    main>section:last-child {
+      border: none;
+      margin-bottom: 30px;
+    }
+
+    .inline-block {
+      width: 600px;
+      margin: 0 auto;
+      /* 消除ul里面的li的换行符的影响,直接把字号设置为0,再在li里面声明字号 */
+      font-size: 0;
+    }
+
+    .inline-block li {
+      display: inline-block;
+      list-style: none;
+      width: 180px;
+      height: 40px;
+      line-height: 34px;
+      text-align: center;
+      background-color: green;
+      border: 3px solid;
+      margin: 0 30px 15px 0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .inline-block li:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    .inline-block li:hover {
+      background-color: pink;
+    }
+
+    footer {
+      background-color: #ee8aee;
+    }
+
+    footer p {
+      text-align: center;
+      width: 200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div>
+      hello world 请调整浏览器窗口大小查看效果
+    </div>
+  </nav>
+  <main>
+    <p>页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px
+      页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px
+      页面主体
+      宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px 页面主体 宽度为600px </p>
+    <ul class="block">
+      <li>宽180高40(包含边框)</li>
+      <li>水平间隙30px</li>
+      <li>垂直间隙15px</li>
+      <li>边框宽度3px</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <section>link</section>
+    <section>link</section>
+    <section>link</section>
+    <section>link</section>
+    <section>link</section>
+  </main>
+  <ul class="inline-block">
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+    <li>inline-block</li>
+  </ul>
+  <footer>
+    <p>&copy;版权所有</p>
+    <p>本页面所有布局使用块元素</p>
+  </footer>
+</body>
+
+</html>
