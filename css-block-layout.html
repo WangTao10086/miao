@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>css block layout</title>
   <style>
+    html,
+    body {
+     background-color:rgba(0,0,0,0.1);
+      box-shadow: 0 0 1px red;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -14,10 +19,12 @@
     nav {
       background-color: #000;
       min-width: 800px;
+    
     }
 
     div {
       max-width: 600px;
+        /* width: calc(50% - 350px); */
       color: #fff;
       margin: 0 auto;
     }
@@ -78,6 +85,10 @@
       margin: 0 auto;
       /* 消除ul里面的li的换行符的影响,直接把字号设置为0,再在li里面声明字号 */
       font-size: 0;
+      /* 2.word-spacing: -5px; */
+      /* 3.text-align两端对齐 justify  text-align-last最后一行两端对齐 */
+      /* text-align: justify;
+      text-align-last: justify; */
     }
 
     .inline-block li {
@@ -91,6 +102,7 @@
       border: 3px solid;
       margin: 0 30px 15px 0;
       box-sizing: border-box;
+      /* font-size: initial; 恢复为初始值 */
       font-size: 16px;
     }
 
