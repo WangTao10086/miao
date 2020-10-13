@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>obs-center</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 第一种 position */
+    .position {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+      margin: 0 auto;
+    }
+
+    .position>span {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      /* 1.绝对定位垂直水平居中
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto; */
+      /* 添加绝对定位后的水平居中 */
+      left: 50%;
+      margin-left: -100px;
+      top: 50%;
+      margin-top: -100px;
+      border: 1px solid red;
+    }
+
+    /* 第二种 inline */
+    .inline {
+      font-size: 0;
+      margin: 0 auto;
+      margin-top: 100px;
+      text-align: center;
+      width: 400px;
+      height: 400px;
+      line-height: 400px;
+      border: 1px solid red;
+      /* background-color: pink; */
+    }
+
+    .inline>span {
+      font-size: 16px;
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="position">
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dignissimos itaque sit, facere iusto ducimus
+      neque illum magnam iure aperiam? Ea quia rem facilis iste maxime quibusdam!</span>
+  </div>
+  <hr>
+  <div class="inline">
+    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi alias natus labore libero sequi asperiores
+      blanditiis fugit maxime ab facere quo totam aspernatur, debitis reiciendis optio fugiat harum facilis quidem.
+    </span>
+  </div>
+</body>
+
+</html>

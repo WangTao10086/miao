@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>div-img-contain</title>
+</head>
+<style>
+  img {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+  }
+
+  img:first-child {
+    margin-top: 100px;
+    object-fit: scale-down;
+  }
+
+  img:nth-child(2) {
+    margin-top: 400px;
+    object-fit: contain;
+  }
+
+  img:nth-child(3) {
+    margin-top: 700px;
+    object-fit: contain;
+  }
+</style>
+
+<body>
+  <img src="https://tse3-mm.cn.bing.net/th/id/OIP.BxAgB-TPUaaZLUyNX8iZsQAAAA?pid=Api&rs=1" alt="">
+  <img
+    src="https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b8389b504fc2d562c6eedd17ec1190ef77c66c61.jpg"
+    alt="">
+  <img src="https://tse1-mm.cn.bing.net/th/id/OIP.sMeu0moaOOuvc9we6WhQ9gAAAA?w=174&h=196&c=7&o=5&dpr=1.25&pid=1.7"
+    alt="">
+
+</body>
+
+</html>
