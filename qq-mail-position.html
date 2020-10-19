@@ -33,8 +33,11 @@
       position: fixed;
       top: 65px;
       left: 0;
+      /* 第一种设置top bottom属性 让其height变为自动,即撑开整个页面 */
+      bottom: 0;
       width: 190px;
-      height: calc(100vh - 65px);
+      /* 第二种 */
+      /* height: calc(100vh - 65px);  */
       background-color: orange;
       border-right: 2px solid blue;
     }
@@ -43,7 +46,8 @@
       position: absolute;
       top: 65px;
       left: 190px;
-      overflow: hidden;
+      right: 0;
+      overflow: scroll;
       background-color:
         #3333;
     }

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>菜单常用布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    } 
+
+    li {
+      border: 1px solid pink;
+    }
+
+    .menu {
+      position: relative;
+    }
+
+    .menu > li {
+      margin-left: 30px;
+      text-align: center;
+      background-color: pink;
+    }
+
+    .menu li {
+      float: left;
+      width: 150px;
+      position: relative;
+    }
+
+    ul ul {
+      position: absolute;
+      display: none;
+    }
+
+    ul ul ul {
+      width: 100px;
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+
+    li:hover {
+      background-color: gold;
+    }
+
+    li:hover > ul {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>新建文件夹
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>
+        </li>
+        <li>打开文件夹
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的</li>
+          </ul>
+        </li>
+        <li>保存
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>
+        </li>
+        <li>关闭文件
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>
+        </li>
+        <li>新建窗口
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>
+        </li>
+        <li>关闭窗口
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>编辑
+      <ul>
+      <li>行
+        <ul>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>定位的应用</li>
+        </ul>
+      </li>
+      <li>注释
+        <ul>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>定位的应用</li>
+        </ul>
+      </li>
+      <li>文本
+        <ul>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>定位的应用</li>
+        </ul>
+      </li>
+      <li>标记
+        <ul>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>定位的应用</li>
+        </ul>
+      </li>
+      <li>自动换行
+        <ul>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>定位的应用</li>
+        </ul>
+      </li>
+      <li>复制
+        <ul>
+          <li>刷新</li>
+          <li>退出</li>
+          <li>定位的应用</li>
+        </ul>
+      </li>
+    </ul>
+    </li>
+    <li>选择
+      <ul>
+        <li>拆分成行
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>选择至段落
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>选择至行
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>反向选择
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>选择至括号
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>选择至缩进
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+      </ul>
+    </li>
+    <li>工具
+      <ul>
+        <li>翻译
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>宏
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>命令代码
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>代码片段
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>录制宏
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>代码开发
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+      </ul>
+    </li>
+    <li>首选项
+      <ul>
+        <li>设置
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>主题
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>字体
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>快捷键设置
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>package settings
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>package controls
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+      </ul>
+    </li>
+    <li>视图
+      <ul>
+        <li>侧边栏
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>缩进
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>布局
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>自动分组
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>自动换行
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+        <li>拼音检查
+          <ul>
+            <li>刷新</li>
+            <li>退出</li>
+            <li>定位的应用</li>
+          </ul>  
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
