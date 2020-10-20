@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iOS checkbox</title>
+  <style>
+    label {
+      position: relative;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 270px;
+      height: 160px;
+      /* background-color: pink; */
+      border-radius: 80px;
+      border: 5px solid grey;
+      transition: 2s;
+    }
+
+    label span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 10px;
+      width: 130px;
+      height: 130px;
+      border-radius: 65px;
+      /* background-color: green; */
+      box-shadow: 0 5px 30px grey ;
+      transition: 2s;
+    }
+
+    input:checked + label {
+      border-color: green;
+      box-shadow: 0 0 0 100px green inset;
+    }
+
+    input:checked + label span {
+      /* right: 10px; */
+      left: 125px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="hehe" hidden> 
+  <label for="hehe">
+    <span></span>
+  </label>
+</body>
+</html>

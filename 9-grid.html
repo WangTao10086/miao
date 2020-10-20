@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 定位做法 */
+    section {
+      height: 200px;
+      position: relative;
+    }
+
+    div {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+    }
+
+    div:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+    div:nth-child(2) {
+      top: 0;
+      left: 55PX;
+    }
+    div:nth-child(3) {
+      top: 0;
+      left: 110PX;
+    }
+    div:nth-child(4) {
+      top: 55px;
+      left: 0px;
+    }
+    div:nth-child(5) {
+      top: 55px;
+      left: 55px;
+    }
+    div:nth-child(6) {
+      top: 55px;
+      left: 110px;
+    }
+    div:nth-child(7) {
+      top: 110px;
+      left: 0px;
+    }
+    div:nth-child(8) {
+      top: 110px;
+      left: 55px;
+    }
+    div:nth-child(9) {
+      top: 110px;
+      left: 110px;
+    }
+    
+    div:hover {
+      border-color:red;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 行內塊做法 */
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      width: 170px;
+      /* border: 1px solid red; */
+    }
+    
+    ul li {
+      display: inline-block;
+      font-size: 16px;
+      vertical-align: top;
+      width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+      margin-left: -5px;
+      position: relative;
+    }
+    ul li:nth-child(3n+1) {
+      margin-left: 0;
+    }
+    ul li:nth-child(n+4) {
+      margin-top: -5px;
+    }
+
+    ul li:hover {
+      border-color: red;
+      z-index: 200;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九宮格</title>
+  <style>
+    /* 表格做法 */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    td {
+      width: 50px;
+      height: 50px;
+      border: 5px inset blue;
+      text-align: center;
+    }
+
+    td:hover {
+      border-color:red;
+      /* 邊框樣式裡solid的優先級高於inset */
+      border-style: solid;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九宮格</title>
+  <style>
+    /* 表格做法 */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    tr,
+    col {
+      border: 5px solid blue;
+    }
+    td {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+    }
+
+    td:hover {
+      border: 5px solid red;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tbody>
+      <col>
+      <col>
+      <col>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
