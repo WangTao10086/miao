@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>導航菜單與區域顏色不同</title>
+  <style>
+    ul {
+  padding: 0;
+  margin: 0;
+}
+
+    body {
+  margin: 0; 
+}
+
+section {
+  height: 500px;
+  position: relative;
+}
+div {
+  border: 1px solid blue;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  clip: rect(auto, auto, auto, auto);
+  /* clip-path: border-box; */
+}
+
+ul {
+  position: fixed;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 110px;
+}
+ul li {
+  border: 1px solid red;
+  list-style: none;
+}
+
+section:nth-child(1) ul {
+  color: red;
+}
+section:nth-child(2) ul {
+  color: lime;
+}
+section:nth-child(3) ul {
+  color: tan;
+}
+section:nth-child(4) ul {
+  color: violet;
+}
+section:nth-child(5) ul {
+  color: magenta;
+}
+
+  </style>
+</head>
+<body>
+  <section>
+    <div>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

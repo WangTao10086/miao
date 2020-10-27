@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+ ul,
+ li {
+  list-style: none;
+}
+
+em {
+  font-style: normal  ;
+}
+a {
+  text-decoration: none;
+  color: #424242;
+}
+
+img {
+  border: 0;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0
+}
+
+.clearfix {
+  *zoom: 1
+}
+/* 声明字体图标 */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?1lv3na');
+  src: url('fonts/icomoon.eot?1lv3na#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?1lv3na') format('truetype'),
+      url('fonts/icomoon.woff?1lv3na') format('woff'),
+      url('fonts/icomoon.svg?1lv3na#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.w {
+  width: 1226px;
+  margin: auto;
+}
+
+ .topbar-wrapper {
+  height: 120px;
+  background-color: #f95643;
+}
+  .topbar-wrapper .top-picture  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a2a9e6db5e3c5374301827435d8595c6.jpg?w=5120&h=240) no-repeat 50%;
+  background-size: auto 120px;
+  height: 120px;
+  width: 100%;
+ }
+
+ .shortcut a {
+   text-decoration: none;
+   color: #b0b0b0;
+   font-size: 12px;
+ }
+
+  .top {
+   height: 40px;
+   background-color: #333;
+   display: flow-root;
+ }
+
+  .top .topnav {
+   position: relative;
+   height: 40px;
+ }
+
+  .topnav .topnav-left li {
+   float: left;
+   line-height: 40px;
+ }
+
+ .topnav .topnav-left li a:hover,
+ .topnav .topnav-middle li a:hover {
+   color: #fff;
+ }
+
+ 
+ .topnav-left em,
+ .topnav-middle em {
+   font-style: normal;
+   color: #393f3f;
+ }
+
+ .topnav-left li:last-child  em {
+   display: none;
+ }
+
+ .topnav-left .app {
+   position: relative;
+ }
+
+ .appcode {
+  position: absolute;
+  z-index: 10000;
+  top: 40px;
+  left:-38px;
+  width: 124px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #aaa;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+  text-align: center; 
+}
+
+ .app .trangle {
+   position: absolute;
+   z-index: 10001;
+   top:20px;
+   left: 15px;
+   width:0 ;
+   height: 0;
+   border: 10px solid transparent;
+   border-bottom-color: #fff;
+   overflow: hidden;
+   display: none;
+ }
+
+
+ .appcode img {
+   display: block;
+   margin: 18px auto 12px;
+ }
+
+ .topnav-left .app:hover .appcode{
+   height: 160px;
+ }
+
+ .topnav-left .app:hover .trangle {
+   display: block;
+ }
+
+ .topnav-middle {
+   margin-right: 130px;
+ }
+
+  .topnav-middle li {
+   float: right;
+   line-height: 40px;
+ }
+
+ .topnav .topnav-middle li:first-child  em {
+  display: none;
+}
+
+ .topnav-right li {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  background-color:#424242;
+}
+
+.topnav-right li a {
+  line-height: 40px;
+}
+
+.topnav-right li a em {
+  font-style: normal;
+}
+
+.shoppingcar::before {
+  content: "\e93a";
+  font-family: 'icomoon';
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.topnav-right:hover em,
+.topnav-right:hover span {
+  color: #ff6700;
+}
+
+.topnav-right li a .tanchuang {
+  position: absolute;
+  z-index: 9999;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  height: 100px;
+  /* 触发bfc  使其包住*/
+  overflow: hidden;
+  box-shadow: 0 1px 5px #aaa;
+  text-align: center;
+  line-height: 100px;
+  /* display: none; */
+  height: 0;
+  transition: height 1s;
+}
+
+.topnav-right li a:hover > .tanchuang {
+  height: 100px;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+ .site-header {
+   /* position: relative; */
+   height: 100px;
+   display: flow-root;
+ }
+
+
+ .site-header .logo {
+  position: relative;
+  float: left;
+  display:block;
+  width: 55px;
+  height: 55px;
+   margin-top: 22px;
+  background-color: #ff6700;
+}
+
+.site-header .logo::before,
+.site-header .logo::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 55px;
+  height: 55px;
+  transition: .5s;
+}
+.site-header .logo::before {
+  background: url(images/mi-logo.png) no-repeat 50% 50%;
+  left: 0;
+}
+
+.site-header .logo::after {
+  background-image: url(images/mi-home.png);
+  left: -55px;
+}
+
+.site-header .logo:hover::before {
+  left: 55px;
+}
+
+.site-header .logo:hover::after {
+  left: 0;
+}
+
+.nav-list {
+  /* position: relative; */
+  /* border: 1px solid; */
+  float: left;
+  width: 850px;
+  height: 88px;
+  padding: 12px 0 0 30px;
+  font-size: 16px;
+}
+
+.nav-list .side-nav {
+  position: relative;
+  float: left;
+  width: 127px;
+  height: 88px;
+  padding-right: 15px;
+}
+
+.nav-list .nav-item {
+  float: left;
+}
+
+.nav-list .nav-item:hover >a {
+  color: #ff6700;
+}
+
+.nav-list .nav-item a {
+  display: block;
+  padding: 26px 10px 38px;
+  color: #333;
+}
+
+.container {
+  position: absolute;
+  float: left;
+  top: 260px;
+  left: 0;
+  z-index: 100;
+  z-index: 2000;
+  box-shadow: 0 0 5px #aaa;
+  background-color: #fff;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: height 0.2s;
+}
+
+.container li {
+  float: left;
+}
+
+.nav-item:hover .container {
+  height: 230px;
+}
+
+.container .title {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container .price {
+  font-size: 12px;
+  color: #ff6700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container img {
+  border-right: 1px solid #aaa;
+}
+
+.container li img {
+  width: 160px;
+  height: 110px;
+}
+
+.site-header .search {
+  position: relative;
+  margin-top: 25px;
+}
+
+.site-header .search input  {
+  border: 1px solid #e0e0e0;
+}
+
+/* .site-header .search input:hover {
+  border-color: #aaa;
+} */
+
+.site-header .search input:first-child {
+  height: 50px;
+  width: 245px;
+  float: left;
+  margin-left: 26px;
+  border-right: 0;
+  background-color: #fff;
+  outline: none;
+  color: #aaa;
+}
+
+
+.site-header .search input:nth-child(2) {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background-color: #fff; 
+  outline: none;
+}
+
+.search-item {
+  position: absolute;
+  z-index: 10000;
+ left: 931px;
+ top: 50px;
+ padding: 10px 0 10px 15px;
+ box-shadow: 0 0 5px #aaa;
+ display: none;
+ background-color: #fff;
+}
+
+.search-item  li {
+  padding-top: 16px;
+  width: 278px;
+}
+.site-header .search input:first-child:focus ~ .search-item{
+  display: block;
+  border: 1px solid #ff6700;
+  border-top: 0;
+}
+
+.site-header .search input:first-child:focus ~ input {
+  border-color:  #ff6700;
+}
+
+.site-header .search input:first-child:focus {
+  border-color:  #ff6700;
+}
+.site-header .search input:nth-child(2):hover {
+  background-color: #ff6700;
+}
+
+ .slideshow {
+   position: relative;
+   width: 1226px;
+   height: 460px;
+ }
+
+ .search::after {
+   content: "\e986";
+   float: right;
+   position: absolute;
+   top: -24px;
+   right: 10px;
+   line-height: 100px;
+   font-family: "icomoon";
+   font-size: 30px;
+   color: #616161;
+ }
+ 
+ .slideshow input {
+   display: none;
+ }
+
+ .slideshow ul {
+   position: relative;
+   width: 100%;
+   height: 100%;
+ }
+
+ .slideshow ul li {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transition: 1s;
+ }
+
+ .slideshow ul a img {
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+
+ .slideshow ul li label {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   width: 40px;
+   height: 70px;
+   font-size: 40px;
+   text-align: center;
+   line-height: 70px;
+   cursor: pointer;
+ }
+
+ .slideshow ul li label:hover {
+   background-color: rgba(0,0,0,0.4);
+ }
+
+ .slideshow ul li label:hover::before {
+   color: red;
+ }
+
+ .slideshow ul li label:nth-child(3)::before {
+  content: "\e920";
+  font-family: 'icomoon';
+  color: #a5a5a5;
+ }
+
+ .slideshow ul li label:nth-child(2)::before {
+   content: "\e91f";
+   font-family: 'icomoon';
+   color: #a5a5a5;
+ }
+
+ .slideshow ul li label:nth-last-child(2) {
+   left: 235px;
+ }
+
+ .slideshow ul li label:nth-last-child(1) {
+   right: 0;
+ }
+
+ .slideshow input:nth-child(1):checked ~ ul.sliders>li:nth-child(1),
+ .slideshow input:nth-child(2):checked ~ ul.sliders>li:nth-child(2),
+ .slideshow input:nth-child(3):checked ~ ul.sliders>li:nth-child(3),   
+ .slideshow input:nth-child(4):checked ~ ul.sliders>li:nth-child(4),
+ .slideshow input:nth-child(5):checked ~ ul.sliders>li:nth-child(5) {
+   /* 当透明度为1时,选中的优先级为最高,显示在最上层 */
+   opacity: 1;
+   z-index: 200;
+ }
+
+ .indicator-wrapper {
+   position: absolute;
+   z-index: 10000;
+   left: 1100px;
+   bottom: 0;
+   /* z-index: 200; */
+   width: 100px;
+ }
+
+ .indicator {
+   display: inline-block;
+ }
+ 
+ .indicator label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius: 5px;
+   margin: 0 3px 20px;
+   cursor: pointer;
+   background-color: #233148;
+ }
+
+.indicator label:hover {
+  background-color:#8997a1;
+}
+
+ .slideshow input:nth-child(1):checked ~ div.indicator-wrapper label:nth-child(1),
+ .slideshow input:nth-child(2):checked ~ div.indicator-wrapper label:nth-child(2),
+ .slideshow input:nth-child(3):checked ~ div.indicator-wrapper label:nth-child(3),   
+ .slideshow input:nth-child(4):checked ~ div.indicator-wrapper label:nth-child(4),
+ .slideshow input:nth-child(5):checked ~ div.indicator-wrapper label:nth-child(5) {
+   background-color:red;
+ }
+
+ .shortcut-nav {
+   margin-top: 10px;
+ }
+
+ .miaosha {
+   float: left;
+   width: 235px;
+   height: 170px;
+   background-color: #5f5750;
+ }
+
+ .miaosha ul li {
+   position: relative;
+   float: left;
+   width: 78px;
+   height: 82px;
+   padding: 0 3px;
+ }
+
+
+ .miaosha ul li a {
+   display: inline-block;
+   padding-top: 18px;
+   width: 70px;
+   height: 64px;
+   text-align: center;
+   color: #cfccca;
+   opacity: 0.7;
+   transition: opacity 0.3s;
+ }
+
+ .miaosha ul li a:hover {
+   opacity: 10;
+ }
+
+ .miaosha ul li::before {
+   content: "";
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  width: 1px;
+  height: 64px;
+  background-color: #665e57;
+ }
+
+ .miaosha ul li::after {
+  content: "";
+ position: absolute;
+ top: 1px;
+ left: 10px;
+ width: 64px;
+ height: 1px;
+ background-color: #665e57;
+}
+
+ .miaosha ul li img {
+   display: block;
+   width: 24px;
+   height: 24px;
+   margin: 0 auto 4px;
+ }
+
+ .shortcut-nav .picture ul li {
+   float: right;
+   margin-left: 14px;
+   width: 316px;
+   height: 170px;
+ }
+
+ .shortcut-nav .picture img {
+   display: block;
+   width: 316px;
+   height: 170px;
+ }
+
+ .second {
+   background-color: #f5f5f5;
+ }
+
+ .main-part .body-name {
+   width: 234px;
+   height: 58px;
+ }
+
+ .main-part-1 {
+   float: left;
+ }
+
+ .main-part-2 {
+   position: relative;
+   float: right ;
+   width: 992px;
+   height: 398px;
+   background-color: pink;
+ }
+
+ .body-name .title {
+   font-size: 22px;
+   font-weight: normal;
+   line-height: 58px;
+   color: #333;
+ }
+
+ .body-inside {
+   width: 234px;
+   height: 340px;
+   background-color: #f1eded;
+   text-align: center;
+   border-top: 1px solid red;
+   box-sizing: border-box;
+ }
+
+ .body-inside h3{
+   padding-top: 15px;
+  font-size: 21px;
+  font-weight: normal;
+  color: #ef3a3b;
+ }
+
+ .body-inside {
+  padding-top: 40px;
+ }
+
+ .body-inside img {
+   width: 34px;
+   height: 53px;
+   margin: 25px auto;
+ }
+
+ .body-inside p {
+   color: #6f6d6d;
+ }
+
+ .countdown {
+  width: 168px;
+  margin: 30px auto 0;
+ }
+
+ .body-inside span {
+   float: left;
+   width: 46px;
+   height: 46px;
+   line-height: 46px;
+   color: #fff;
+   font-size: 24px;
+   background-color: #605751;
+ }
+
+ .body-inside em {
+   float: left;
+   width: 15px;
+   height: 46px;
+   font-size: 24px;
+   line-height: 46px;
+   color:#605751;
+ }
+
+ .control {
+   position: absolute;
+   top: 25px;
+   right: 0;
+ }
+
+ .control span {
+   float: right;
+   width: 37px;
+   height: 24px;
+   text-align: center;
+   border: 1px solid #b0b0b0;
+   cursor: pointer;
+ }
+
+ .control span:first-child {
+   border-left:0;
+ }
+
+ .control span:nth-child(1) em::before{
+   content: '\e920';
+  font-family: "icomoon";
+  font-size: 16px;
+  line-height: 24px;
+ }
+
+ .control span:nth-child(2) em::before{
+  content: '\e91f';
+ font-family: "icomoon";
+ font-size: 16px;
+ line-height: 24px;
+}
+
+.control span:nth-child(1):hover>em:nth-child(1)::before {
+  color: #ff6700;
+}
+
+.control span:nth-child(2):hover>em:nth-child(1)::before {
+  color: #ff6700;
+}
