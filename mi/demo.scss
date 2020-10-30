@@ -1,0 +1,402 @@
+.middle-banner-1 {
+  width: 1226px;
+  height: 120px;
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&w=1226&h=120&f=webp&q=90) ;
+  background-repeat: no-repeat;
+  margin:20px auto;
+}
+
+.mobile {
+  width: 1226px;
+  height: 672px;
+  .topline-1 {
+    height: 58px;
+    width: 1226px;
+    .one{
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 58px;
+    }
+    .two {
+      float: right;
+      font-size: 16px;
+      line-height: 58px;
+      &:hover {
+        color: #ff6700;
+      }
+      &:hover em {
+        background-color: #ff6700;
+      }
+      em {
+        position: relative;
+        margin-left: 8px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #b0b0b0;
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 20px;
+          text-align: center;
+          line-height:20px;
+          margin-left: -2px;
+          color: #fff;
+          content: "\e920";
+          font-family: "icomoon";
+        }
+      }    
+    }
+  }
+  .mobile-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 1226px;
+    height: 614px;
+    // background-color: green;
+    li {
+      width: 234px;
+      height: 300px;
+      background-color: #fff;
+      text-align: center;
+      transition:  1s;
+      &:hover {
+        // margin在space-between情况下时,magin会让上方盒子变化,下方盒子没有变化. 尽量不要用magin来做过渡效果,会改变布局结构.可以使用translate 或者相对定位来做
+        // margin-top: -50px;
+        transform: translateY(-2px);
+        box-shadow: 0 0 5px #aaa;
+      }    
+      img {
+         margin: 0 17px;
+         width: 160px;
+         height: 160px;
+      }
+      h3 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        margin: 5px 10px 10px;
+      }
+      p {
+        font-size: 12px;
+        color: #b0b0b0;
+        margin:0 10px 10px;
+      }
+      div {
+        font-size: 16px;
+        color: #ff6700;
+      }
+    }
+    li:first-child {
+      width: 234px;
+      height: 614px;
+      background-color: red;
+      img {
+        width: 234px;
+        height: 614px;
+        margin: 0;
+      }
+    }   
+  }
+}
+
+.middle-banner-2 {
+  margin: 30px auto;
+}
+
+.appliance {
+  position: relative;
+  width: 1226px;
+  height: 672px;
+  .one {
+    float: left;
+    height: 58px;
+    // width: 800px;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+  }
+  .fixed-item {
+    position: absolute;
+    top: 58px;
+    li {
+      height: 300px;
+      width: 234px;
+    &:first-child {
+      margin-bottom: 14px;
+    }
+    }
+  }
+  .two {
+    float: right;
+    // width: 80px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 58px;
+    &:hover {
+      color: #ff6700;
+      border-bottom: 3px solid #ff6700;
+    }
+    &:hover > .appliance-item-1 {
+      // opacity: 1;
+      // transition: none;
+      visibility: visible;
+      transition: none;
+    }
+    .appliance-item-1 {
+      position: absolute;
+      top: 58px;
+      right: 0;
+      float: left;
+      height: 614px;
+      width: 992px;
+      // opacity: 0;
+      // transition: opacity 0s 9999s;
+      visibility: 0;
+      transition: visibility 0s 99999s;
+      li {
+        float: left;
+        margin: 0 0 14px 14px;
+        width: 234px;
+        height: 300px;
+        padding: 25px 0;
+        text-align: center;
+        background-color: #fff;
+        transition: 1s;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow:  0 0 5px #aaa;
+        }
+        a {
+          display: inline-block;
+          width: 234px;
+          height: 250px;
+          img {
+            margin: 0 17px;
+            width: 160px;
+            height: 160px;
+          }
+          h3 {
+            line-height: initial;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            margin:0 10px 10px;
+          }
+          p {
+            line-height: initial;
+            font-size: 12px;
+            color: #b0b0b0;
+            margin:0 10px 10px;
+          }
+          div {
+            line-height: initial;
+            font-size: 16px;
+            color: #ff6700;
+          }
+        }
+      }
+      li:nth-child(n+8) {
+        width: 234px;
+        height: 143px;
+        a {
+          display: inline-block;
+          height: 120px;
+          width: 200px;
+          // background-color: green;
+          text-align: initial;
+          p {
+            color: #333;
+            font-size: 14px;
+            width: 90px;
+          }
+          p:nth-child(2) {
+            color: #ff6700;
+            font-size: 16px;
+          }
+          img {
+            float: right;
+            margin: -80px 0 0;
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+      li:last-child {
+        position: relative;
+        a {
+          padding-top: 20px;
+          width: 200px;
+          height: 80px;
+          .more {
+            color: #333;
+            font-size: 18px;
+            width: 90px;
+          }
+          #title {
+            color: #757575;
+            font-size: 12px;
+          }
+          span{
+            float: right;
+            position: absolute;
+            top: 32%;
+            right: 40px;
+            height: 48px;
+            width: 48px;
+            border-radius: 24px;
+            border: 5px solid #ff6700;
+          }
+            &::before {
+            float: right;
+            position: absolute;
+            top: 30%;
+            right: 50px;
+            content: "\ea3c";
+            font-family: "icomoon";
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  .three {
+    float: right;
+    line-height: 58px;
+    height: 45px;
+    font-size: 16px;
+    margin-right: 16px;
+    &:hover {
+      color: #ff6700;
+      border-bottom: 3px solid #ff6700;
+    }
+    &:hover  .appliance-item-2 {
+      visibility: visible;
+      transition: none;
+      // opacity: 1;
+      // transition: none;
+    }
+    .appliance-item-2 {
+      position: absolute;
+      top: 58px;
+      right: 0;
+      float: left;
+      height: 614px;
+      width: 992px;
+      // display:none 不能使用transition, visibility和opacity可以
+      visibility: hidden;
+      transition: visibility 0s;
+      // opacity: 0;
+      // transition: opacity 0s;
+      li {
+        float: left;
+        margin: 0 0 14px 14px;
+        width: 234px;
+        height: 300px;
+        padding: 25px 0;
+        text-align: center;
+        background-color: #fff;
+        transition: 1s;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow:  0 0 5px #aaa;
+        }
+        a {
+          display: inline-block;
+          width: 234px;
+          height: 250px;
+          img {
+            margin: 0 17px;
+            width: 160px;
+            height: 160px;
+          }
+          h3 {
+            line-height: initial;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            margin:0 10px 10px;
+          }
+          p {
+            line-height: initial;
+            font-size: 12px;
+            color: #b0b0b0;
+            margin:0 10px 10px;
+          }
+          div {
+            line-height: initial;
+            font-size: 16px;
+            color: #ff6700;
+          }
+        }
+      }
+      li:nth-child(n+8) {
+        width: 234px;
+        height: 143px;
+        a {
+          display: inline-block;
+          height: 120px;
+          width: 200px;
+          // background-color: green;
+          text-align: initial;
+          p {
+            color: #333;
+            font-size: 14px;
+            width: 90px;
+          }
+          p:nth-child(2) {
+            color: #ff6700;
+            font-size: 16px;
+          }
+          img {
+            float: right;
+            margin: -80px 0 0;
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+      li:last-child {
+        position: relative;
+        a {
+          padding-top: 20px;
+          width: 200px;
+          height: 80px;
+          .more {
+            color: #333;
+            font-size: 18px;
+            width: 90px;
+          }
+          #title {
+            color: #757575;
+            font-size: 12px;
+          }
+          span{
+            float: right;
+            position: absolute;
+            top: 32%;
+            right: 40px;
+            height: 48px;
+            width: 48px;
+            border-radius: 24px;
+            border: 5px solid #ff6700;
+          }
+            &::before {
+            float: right;
+            position: absolute;
+            top: 30%;
+            right: 50px;
+            content: "\ea3c";
+            font-family: "icomoon";
+            font-size: 30px;
+          }
+        }
+      }
+    }    
+    }
+  }
