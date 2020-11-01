@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meidia </title>
+  <style>
+    * {
+      box-shadow: 0 0 1px red;
+     background-color: rgba(0,0,0,0.1); 
+    }
+    /* 当屏幕宽度小于1000px时 flex-direction变为列排列布局 */
+    @media(max-width:1000px) {
+      section {
+        flex-direction: column;
+      }
+    }
+    section {
+      display: flex;
+      height: 200px ;
+    }
+    /* Note: 当一个元素同时被设置了 flex-basis (除值为 auto 外) 和 width (或者在 flex-direction: column 情况下设置了height) , flex-basis 具有更高的优先级. */
+    div {
+      flex-basis: 70%;
+    }
+    span{
+      flex-basis: 30%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>a</div>
+    <span>b</span>
+  </section>
+</body>
+</html>

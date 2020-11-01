@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 使用display:table-cell 利用表格 */
+    div {
+      height: 100px;
+      width: 300px;
+      background-color: pink;
+      display: table-cell;
+      vertical-align: bottom;
+      transition: 1s;
+    }
+
+    div:hover {
+      font-size: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div>订阅博客</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 使用伪元素*/
+    section {
+      height: 100px;
+      width: 300px;
+      background-color: green;
+      transition: 1s;
+    }
+
+    section::after {
+      content: '';
+      display: inline-block;
+      height: 100px;
+      width: 10px;
+      background-color: red;
+      /* 行内块元素的幽灵字符 */
+      vertical-align: bottom;
+    }
+
+    section:hover {
+      font-size: 60px;
+    }
+  </style>
+</head>
+<body>
+  <section>订阅博客</section>
+</body>
+</html>

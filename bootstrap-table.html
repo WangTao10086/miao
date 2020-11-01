@@ -4,8 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bootstrap-table</title>
+  <!-- <link rel="stylesheet" href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css"> -->
+  <style>
+    /* .table-dark与其他类名样式组合 */
+    /* table类名所声明的样式 */
+    body {
+      margin: 0;
+    }
+    .table {
+      width: 100%;
+      /* 单元格拆分以后,行组列祖不能有边框 加border-collapse就可以让其有边框 */
+      border-collapse: collapse;
+    }
+
+    .table th {
+      text-align: left;
+    }
+
+    .table th,
+    .table td {
+      padding: 12px;
+    }
+
+    .table thead tr {
+      border-bottom:2px solid #dee2e6;
+    }
+
+    .table tbody tr {
+      border-top: 1px solid #dee2ed;
+    }
+
+    /* table-dark声明的样式 */
+    .table-dark {
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    .table thead tr {
+      border-bottom:2px solid #454d55;
+    }
+
+    .table tbody tr {
+      border-top: 1px solid #454d55;
+    }
+
+    /* table-hover 声明的样式 */
+    /* 考虑 优先级的问题  加个table选择器 或者将位置挪到后面去*/
+    table.table-hover tbody tr:hover {
+      background-color: #ececec;
+    }
+    /* .table-dark和.table-hover同时被选择时 */
+    table.table-dark.table-hover tbody tr:hover {
+      background-color: #43494e;
+    }
+
+    /* table-small声明的样式 */
+    .table-small th,
+    .table-small td{
+      font-size: 5px;
+    }
+
+    /* table-striped声明的样式 */
+    .table-striped tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+    
+    /*  .table-dark和.table-striped同时被选择时 */
+    .table-dark.table-striped tbody tr:nth-child(odd) {
+      background-color: #3e444a;
+    }
+
+    /* table-bordered声明的样式 */
+    .table-bordered {
+      border: 1px solid #dee2e6;
+    }
+    
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #dee2ed;
+    }
+
+    .table-dark.table-bordered th,
+    .table-dark.table-bordered td {
+      border: 1px solid #454d55;
+    }
+
+    /* table-borderless声明的样式 */
+    /* 不可以用border:hidden 会让所有的border消失 table的border就不会显示出来了 */
+    .table-borderless th,
+    .table-borderless td {
+      border: none;
+    }
+
+    .table-borderless thead tr,
+    .table-borderless tbody tr {
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  
+  <!-- <table class="table table-dark table-striped table-bordered table-hover"> -->
+    <table class="table table-hover xtable-dark xtable-small table-striped table-bordered table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
 </body>
 </html>
