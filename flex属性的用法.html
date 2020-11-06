@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 属性的用法</title>
+  <style>
+
+/* flex-grow
+flex-grow指定了容器剩余空间多余时候的分配规则，默认值是0，多余空间不分配。
+flex-shrink
+flex-shrink指定了容器剩余空间不足时候的分配规则，默认值是1，空间不足要分配。
+flex-basis
+flex-basis则是指定了固定的分配数量，默认值是auto。如会忽略设置的同时设置width或者height属性
+     */
+
+
+     /* 一个flex子项的最终尺寸是基础尺寸、弹性增长或收缩、最大最小尺寸限制共同作用的结果。 */
+* {
+  background-color: rgba(0,0,0,.1);
+  box-shadow:inset 0 0 1px red;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+/* 200px  40px 即为flex-basis是固定分配的数量 当页面缩小时,.d 和.e缩小至自身大小40px 保底为40px 然后.a开始缩小至自身最小状态 然后.b .c缩小至最小状态   */
+.container {
+  display:flex;
+  /* border:2px solid green; */
+}
+/* .a.b.c 都不会占用剩余的空间flex-grow为0   但是会随着剩余空间不足时, .a会缩小两倍于.b和.c的宽度*/
+
+.a {
+  flex:0 2 200px;
+}
+
+.b {
+  flex:0 1 200px;
+}
+
+.c {
+  flex:0 1 200px;
+}
+
+/* .d 和 .e 空间不足的时候也不会缩小 flex-shrink为0  但是他们会占用.a .b .c占据后剩余的位置3/5 和2/5  */
+.d {
+  flex:3 0 40px;
+}
+.e {
+  flex:2 0 40px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="a">老大</div>
+    <div class="b">老二</div>
+    <div class="c">老三</div>
+    <div class="d">老四</div>
+    <div class="e">老五</div>
+  </div>
+</body>
+</html>

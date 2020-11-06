@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      background-color: rgba(0,0,0,.1);
+      box-shadow: inset 0 0 1px red;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    div{
+      width: 100px;
+      /* 剩余多少空间分配给每个div 剩余的空间是flex容器的大小减去所有flex项的大小加起来的大小 */
+      flex-grow: 1;
+    }
+
+    div::before {
+      content: "";
+      /* CSS百分比padding都是相对宽度计算的 */
+      padding-bottom: 100%;
+      display: block;
+    }
+
+    /*-n+19 是代表视窗最多可以显示这么多窗口是19个 所以从最后第十九个开始让它消失  */
+    div:nth-last-child(-n + 19) {
+      /* 用height把后面元素隐藏 */
+      height: 0px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>

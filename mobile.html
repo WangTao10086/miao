@@ -11,15 +11,21 @@
   <!-- 3.width=device-width 利用js代码直接计算出窗口宽度的px单位 直接设置到html元素上去 之后每个元素再使用 /100 +rem单位即可 -->
   <!-- 此处利用第三种方法 -->
   <script>
-    document.documentElement.style.fontSize = window.innerWidth / 720 * 100 + 'px'
+    document.documentElement.style.fontSize = window.innerWidth / 720 * 100 + 'px';
 window.onresize = () => {
-    document.documentElement.style.fontSize = window.innerWidth / 720 * 100 + 'px'
+    document.documentElement.style.fontSize = window.innerWidth / 720 * 100 + 'px';
 }
   </script>
   <style>
    html {
     background: url(ruler.png);
+    /* font-size: calc(100vw / 720 * 100); */
    } 
+
+   /*字体的高度会继承 会让幽灵字符的字体大小随着html字体的大小变化而变化 */
+  body {
+    font-size: 0.16rem;
+  }
 
    * {
      margin: 0;
@@ -31,6 +37,8 @@ window.onresize = () => {
      height: 1rem;
      margin: 0 auto;
      background-color: pink;
+     font-size: 0;
+
    }
 
    .icon { 
@@ -48,7 +56,6 @@ window.onresize = () => {
 <body>
   <div class="topbar">
     <div class="icon">
-      <!-- <img src="//s02.mifile.cn/assets/static/image/mi-logo.png" alt=""> -->
       <img src="mi/images/mi-logo.png" alt="xiaomi-logo">
     </div>
     <!-- <div class="search">

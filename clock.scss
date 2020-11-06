@@ -1,0 +1,183 @@
+// * {
+//   xbackground-color: rgba(0,0,0, .1);
+//   xbox-shadow: inset 0 0 1px green;
+// }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.miao {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  text-align: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 260px auto;
+  background-image: url(../miao.jpg);
+  background-position: 0 0;
+  clip-path: circle(40%);
+}
+.number {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 300px auto;
+  span {
+    position: absolute;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: purple;
+  }
+  span:nth-child(1) {
+    transform: rotate(-60deg) translate(200px) rotate(60deg);
+  }
+  span:nth-child(2) {
+    transform: rotate(-30deg) translate(200px) rotate(30deg);
+  }
+  span:nth-child(3) {
+    transform: rotate(0deg) translate(200px) rotate(0deg);
+  }
+  span:nth-child(4) {
+    transform: rotate(30deg) translate(200px) rotate(-30deg);
+  }
+  span:nth-child(5) {
+    transform: rotate(60deg) translate(200px) rotate(-60deg);
+  }
+  span:nth-child(6) {
+    transform: rotate(90deg) translate(200px) rotate(-90deg);
+  }
+  span:nth-child(7) {
+    transform: rotate(120deg) translate(200px) rotate(-120deg);
+  }
+  span:nth-child(8) {
+    transform: rotate(150deg) translate(200px) rotate(-150deg);
+  }
+  span:nth-child(9) {
+    transform: rotate(180deg) translate(200px) rotate(-180deg);
+  }
+  span:nth-child(10) {
+    transform: rotate(210deg) translate(200px) rotate(-210deg);
+  }
+  span:nth-child(11) {
+    transform: rotate(240deg) translate(200px) rotate(-240deg);
+  }
+  span:nth-child(12) {
+    transform: rotate(270deg) translate(200px) rotate(-270deg);
+  } 
+}
+
+
+
+.kedu {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  text-align: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 260px auto;
+  em {
+    box-shadow: inset 0 0 1px #211a10;
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 3px;
+      height: 10px;
+      border-radius: 20px;
+      background-color: #211a10;
+    }
+  }
+}
+
+.kedu em:nth-child(5n)::before {
+    width: 5px;
+    height: 20px;
+
+}
+
+@for $i from 1 through 60 {
+  em:nth-child(#{$i}) {
+    transform: rotate($i * 6deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hour {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 350px;
+  margin:  auto;
+  width: 8px;
+  height: 150px;
+  border-radius: 20px;
+  transform-origin: center bottom ;
+  animation: rotating 21600s steps(60) infinite;
+  background-image: url(../miao.jpg);
+  background-position: 300px 300px;
+}
+
+.minute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 330px;
+  margin:  auto;
+  width: 6px;
+  height: 170px;
+  border-radius: 20px;
+  transform-origin: center bottom ;
+  animation: rotating 3600s steps(60) infinite;
+  background-image: url(../miao.jpg);
+  background-position: 200px 200px;
+}
+
+.second {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 310px;
+  margin:  auto;
+  width: 4px;
+  height: 190px;
+  border-radius: 20px;
+  background-color: orange;
+  transform-origin: center bottom ;
+  animation: rotating 60s steps(60) infinite;
+  background-image: url(../miao.jpg);
+  background-position: 230px 130px;
+}

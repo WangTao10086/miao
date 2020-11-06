@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation实现跑马灯效果</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes pao {
+      from {
+        right: -48px;
+      }
+      to {
+        right: 100%;
+      }
+    }
+
+    body {
+      position: relative;
+    }
+
+    div {
+      position: absolute;
+      background-color: pink;
+      height: 21px;
+      width: 50px;
+      right: -48px;
+      animation-name: pao;
+      animation-duration: 28s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    marquee {
+      margin-top: 30px; 
+    }
+  </style>
+</head>
+<body>
+  <div>呵呵呵</div>
+  <marquee>你爸爸来了</marquee>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {
+  background-color: rgba(0,0,0,0.1);
+  box-shadow:inset 0 0 1px red;
+}
+
+@keyframes move {
+  from {
+    margin-left: 100%;
+    transform:translate(0);
+  }
+  to {
+    margin-left: 0;
+    transform:translate(-100%);
+  }
+}
+div{
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+span {
+  display:inline-block;
+  animation:move 28s linear infinite;
+}
+  </style>
+</head>
+<body>
+<div>
+  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti veniam itaque veritatis dolore minima eos sint repellat iure. Velit laudantium minima porro dolorum explicabo laboriosam! Laudantium ullam, placeat eius. Itaque.</span>
+</div>
+  <marquee behavior="" direction="">你大爷</marquee>
+</body>
+</html>

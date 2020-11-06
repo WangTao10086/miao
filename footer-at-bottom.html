@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>footer-at-bottom</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0,0,0,0.1);
+      box-shadow: inset 0 0 1px red;
+    }
+    html {
+      height: 100%;
+    }
+    
+    body {
+      position: relative; 
+      min-height: 100%;
+      /* 如果不是border-box body的min-height都会大于100% */
+      box-sizing: border-box;
+      padding-bottom: 21px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae officiis quidem, unde qui consequatur nisi id enim doloremque voluptatem minima provident, esse at necessitatibus hic totam est iusto, nostrum molestiae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio distinctio magni cum expedita quam. Inventore, ab fugit? Accusamus perspiciatis earum optio recusandae facilis laboriosam eligendi eveniet iusto. Quae, id nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, assumenda libero quae perferendis reprehenderit porro quam beatae nobis ex deleniti consequatur tempore modi nostrum quas nemo voluptatum itaque. Impedit, commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ipsam neque eum ratione libero voluptate. Ullam architecto, similique beatae inventore recusandae esse ipsa mollitia corrupti tenetur delectus aliquam a ex. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, quis incidunt. Similique, omnis quos sint repellat inventore aperiam consectetur reprehenderit magni, pariatur nisi facilis voluptate, porro error mollitia tempore in!
+  </p>
+  <footer>劳资永远在最底下</footer>
+</body>
+</html>

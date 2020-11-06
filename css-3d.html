@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css-3d</title>
+  <style>
+    @keyframes rotating {
+      from {
+        transform: rotateX(0) rotateZ(0);
+      }
+      to {
+        transform: rotateX(1turn) rotateZ(10turn) ;
+      }
+    }
+
+    section {
+      width: 200px;
+      /* width: 200px; */
+      height: 200px;
+      margin: 100px auto;
+      transform-style: preserve-3d;
+      animation: rotating  20s linear infinite; 
+      /* transform-origin: center center; */
+    }
+
+    div {
+      /* 放在子元素里 */
+      perspective: 1000px;
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      opacity: 0.5;
+      text-align: center;
+      line-height: 200px;
+      font-size: 100px;
+    }
+
+    div:nth-child(1) {
+      background-color: pink;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    div:nth-child(2) {
+      background-color: green;
+       transform: rotateX(-90deg)  translateZ(100px);
+    }
+    div:nth-child(3) {
+      background-color: orange;
+      transform: rotateY(90deg)  translateZ(100px);
+    }
+    div:nth-child(4) {
+      background-color: blue;
+      transform: rotateY(-90deg)  translateZ(100px);
+    }
+    div:nth-child(5) {
+      background-color: yellow;
+      transform:  translateZ(-100px);
+    }
+    div:nth-child(6) {
+      background-color: red;
+      transform:  translateZ(100px);
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: red;
+      /* line-height: 5px; */
+      /* font-size: 100px; */
+      /* 消除幽灵字符 */
+      /* 1.img  display;block 不常用
+         2.img  vertical-align 除了默认值 
+         3.line-height 值给的很小
+         4.font-size 为0时*/
+      font-size: 0;   
+      line-height: 1000px;
+    }
+
+    img {
+      /* 垂直居中 */
+      vertical-align: middle;
+      /* display: block; */
+    }
+
+    span {
+      border: 1px solid;
+      /* vertical-align: -10%;  vertical-align百分比相对于line-height*/
+      font-size: 100px;
+      /* line-height: 0; */
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <img src="小米视觉稿.png" alt="">
+  <span>zxxx小米  </span>
+  </div>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 第一个span里面没有内联元素,但是第二个里面有很多文字 纯正的内联元素. 则以最后一行文字的baseline与第一个span的margin-box底部相对齐 */
+    .baseline {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      border: 1px solid red;
+      font-size: 14px;
+      /* font-size为0时 会让有文字的那个span的baseline等各种线都在第一行所以会出现这种情况 */
+      font-size: 0;
+    }
+  </style>
+</head>
+<body>
+  <span class="baseline"></span>
+  <span class="baseline">Lorem ipsum dolor sit </span>
+</body>
+</html>

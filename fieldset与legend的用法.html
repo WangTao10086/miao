@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fieldset与legend的用法</title>
+  <STYle>
+    legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+   }
+
+    .output {
+        font: 1rem 'Fira Sans', sans-serif;
+    }
+    
+    input {
+        margin: .4rem;
+    }
+
+
+  </STYle>
+</head>
+<body>
+  <!-- HTML <fieldset> 元素用于对表单中的控制元素进行分组（也包括 label 元素）。 内置了一个 <legend> 元素作为 fieldset 的标题。 -->
+  <!-- 这个元素有几个属性，最值得注意的是 form，其可以包含同一页面的 <form> 元素的 id，以使 <fieldset> 成为这个 <form> 的一部分，即<fieldset> 不在其内。还有 disabled 属性，可将 <fieldset> 及其所有内容设置为不可用。 -->
+<form>
+  <!-- disabled属性会让其内内容不可编辑 -->
+   <fieldset >
+     <!-- legend就相当于fieldset的标题 -->
+     <legend>Choose your favorite monster</legend>
+
+     <input type="radio" id="kraken" name="monster">
+     <label for="kraken">Kraken</label><br/>
+
+     <input type="radio" id="sasquatch" name="monster">
+     <label for="sasquatch">Sasquatch</label><br/>
+
+     <input type="radio" id="mothman" name="monster">
+     <label for="mothman">Mothman</label>
+   </fieldset>
+  </form>
+      
+</body>
+</html>
