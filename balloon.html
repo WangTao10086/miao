@@ -5,13 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>balloon.css 样式</title>
   <style>
+    button {
+      display: block;
+      width: 15%;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: #b71212;
+      border:none;
+      border-radius: 10px;
+      color: white;
+      font-size: 30px;
+    }
+
+    [aria-label] {
+      position: relative;
+    }
+
+    [aria-label]::before {
+      content: attr(aria-label);
+      background-color: black;
+      position: absolute;
+      padding: 5px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: .5s;
+      /* 元素感应不到鼠标 */
+      pointer-events: none;
+    }
+
+    [aria-label]::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      border: 10px solid black;   
+      transition: .5s;
+      /* 元素感应不到鼠标 */
+      pointer-events: none; 
+    }
+
+    [aria-label]:not([data-balloon-length])::before {
+      /* 两种让文字不折行方法 不能直接给aria-label 会让所有的button不折行*/
+      /* white-space: nowrap; */
+      /* 宽度为最大内容盒子时 */
+      width: max-content;
+    }
+
+    /* 所有的样式都会呈现向上hover的状态,当没有data-balloon-pos类时 */
+    [aria-label]:not([data-balloon-pos])::before,
+    [data-balloon-pos="up"]::before {
+      /* 绝对定位向右走父元素百分之五十的宽度 */
+      left: 50%;
+      bottom: calc(100% + 20px);
+      /* 走自身的百分50%的宽度 水平居中 */
+      transform: translatex(-50%) translateY(24px);
+    }
+
+    [aria-label]:not([data-balloon-pos])::after,
+    [data-balloon-pos="up"]::after {
+      left: 50%;
+      top: -20px;
+      transform: translatex(-50%) translateY(24px); 
+      border-color: black transparent transparent transparent; 
+    }
+
+    [data-balloon-pos="down"]::before {
+      left: 50%;
+      top: calc(100% + 20px);
+      transform: translatex(-50%)  translateY(-24px);
+    }
     
+    [data-balloon-pos="down"]::after {
+      left: 50%;
+      bottom: -20px;
+      transform: translatex(-50%) translateY(-24px); 
+      border-color:  transparent transparent black transparent; 
+    }
+
+    [data-balloon-pos="left"]::before {
+      top: 50%;
+      right: calc(100% + 20px);
+      transform: translatey( -50%) translateX(24px);
+    }
+    
+    [data-balloon-pos="left"]::after {
+      top: 50%;
+      left:  -20px;
+      transform: translatey(-50%) translateX(24px);
+      border-color:  transparent transparent  transparent black; 
+    }
+
+    [data-balloon-pos="right"]::before {
+      top: 50%;
+      left: calc(100% + 20px);
+      transform: translatey( -50%) translateX(-24px);
+    }
+    
+    [data-balloon-pos="right"]::after {
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%) translateX(-24px);
+      border-color:  transparent black transparent  transparent ; 
+    }
+
+    /* 当满足类aria-label而没有data-balloon-pos时也会展示向上的效果 */
+    [aria-label]:not([data-balloon-pos]):hover::before,
+    [aria-label]:not([data-balloon-pos]):hover::after,
+    [aria-label][data-balloon-pos="up"]:hover::before,
+    [aria-label][data-balloon-pos="up"]:hover::after {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    [aria-label][data-balloon-pos="down"]:hover::before,
+    [aria-label][data-balloon-pos="down"]:hover::after {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    [aria-label][data-balloon-pos="left"]:hover::before,
+    [aria-label][data-balloon-pos="left"]:hover::after {
+      transform: translateY(-50%) translateX(0);
+    }
+
+    [aria-label][data-balloon-pos="right"]:hover::before,
+    [aria-label][data-balloon-pos="right"]:hover::after {
+      transform: translateY(-50%) translateX(0);
+    }
+
+    [aria-label]:hover::before,
+    [aria-label]:hover::after {
+      opacity: 1;
+    }
+    
+    [data-balloon-length="small"]::before {
+      width: 200px;
+    }
+
+    [data-balloon-length="medium"]::before {
+      width: 400px;
+    }
+
+    [data-balloon-length="large"]::before {
+      width: 600px;
+    }
+
+    [data-balloon-length="x-large"]::before {
+      width: 800px;
+    }
+
+    [data-balloon-length="fit"]::before {
+      width:100%;
+    }
+
+    [data-balloon-visible]::before,
+    [data-balloon-visible]::after {
+      opacity: 1;
+    }
+
+    /* 没有hover时的效果  和hover后的位置在同一个地方 */
+    [data-balloon-visible][data-balloon-pos="down"]::before,
+    [data-balloon-visible][data-balloon-pos="down"]::after {
+      transform: translatex(-50%) translateY(0);
+    }
+    [data-balloon-blunt]::before,
+    [data-balloon-blunt]::after {
+      /* transition=0 还存在过渡效果和transition=none 即过渡效果消失 ,是不一样的 */
+      transition: none;
+    }
   </style>
 </head>
 <body>
-  <button>Lorem.</button>
-  <button>In?</button>
-  <button>Accusantium.</button>
-  <button>Accusamus?</button>
+  <button aria-label="hello world" data-balloon-pos="up">up</button>
+  <button aria-label="hello world" data-balloon-pos="down">down</button>
+  <button aria-label="hello world" data-balloon-pos="left">left</button>
+  <button aria-label="hello world" data-balloon-pos="right">right</button>
+  <button aria-label="hello world" data-balloon-pos="up" data-balloon-length="small">small</button>
+  <button aria-label="hello world" data-balloon-pos="up" data-balloon-length="medium">medium</button>
+  <button aria-label="hello world" data-balloon-pos="up" data-balloon-length="large">large</button>
+  <button aria-label="hello world" data-balloon-pos="up" data-balloon-length="x-large">x-large</button>
+  <button aria-label="lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus unde " data-balloon-pos="up" data-balloon-length="fit">x-large</button>
+  <button aria-label="hello world" data-balloon-visible>visible</button>
+  <button aria-label="hello world" data-balloon-pos="down" data-balloon-visible>down</button>
+  <button aria-label="hello world" data-balloon-pos="down" data-balloon-blunt>blunt</button> 
 </body>
 </html>
