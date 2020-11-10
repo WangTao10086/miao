@@ -74,7 +74,7 @@
   var d = 2 * r
   var perimeter = 2 * 3.141592653 * r
   var area = 3.141592653 * r * r
-  console.log(d.toFixed(4) , Number(perimeter.toFixed(4)) , Number(area.toFixed(4)));
+  console.log(d.toFixed(4) , perimeter.toFixed(4) , area.toFixed(4));
 </script>
 
 <script type="norun" id="ch0103/10">
@@ -132,7 +132,7 @@
   console.log(Number(distance.toFixed(3)));
 </script>
 
-<script xtype="norun" id="ch0103/17">
+<script type="norun" id="ch0103/17">
   var X1 = Number(prompt('请输入X1的坐标'))
   var Y1 = Number(prompt('请输入Y1的坐标'))
   var X2 = Number(prompt('请输入X2的坐标'))
@@ -146,6 +146,7 @@
   var p = (a + b + c) / 2
   var s = Math.sqrt(p * (p - a) * (p - b) * (p - c))
   console.log(s.toFixed(2));
+
 </script>
 
 <script type="norun" id="ch0103/18">
@@ -213,9 +214,9 @@
   var num = Number(str.charCodeAt())
   // console.log(num);
   if (num % 2 == 1 ) {
-    console.log('Yes');
+    console.log('YES');
   } else {
-    console.log('No');
+    console.log('NO');
   }
 </script>
 
@@ -253,9 +254,9 @@
 <script type="norun" id="ch0104/08">
   var n = Number(prompt('请输入一个数为n:'))
   if (n % 3 == 0 && n % 5 == 0) {
-    console.log('Yes');
+    console.log('YES');
   } else {
-    console.log('No');
+    console.log('NO');
   }
 </script>
 
@@ -292,44 +293,151 @@
   }
 </script>
 
-<script xtype="norun" id="ch0104/11">
-
+<script type="norun" id="ch0104/11">
+  var date = Number(prompt('看展览时间date:'))
+  if (date == 1 || date == 3 ||date == 5) {
+    console.log('NO');
+  } else {
+    console.log('YES');
+  }
 </script>
 
-<script xtype="norun" id="ch0104/12">
-
+<script type="norun" id="ch0104/12">
+  var n = Number(prompt('输入办事行走的距离:'))
+  var a = n / 1.2
+  var b = n /3 + 50
+  if ( a > b) {
+    console.log('Bike');
+  } else  {
+    console.log('Walk');
+  }
 </script>
 
-<script xtype="norun" id="ch0104/13">
-
+<script type="norun" id="ch0104/13">
+  var x =Number(prompt('请输入一个浮点数为x:'))
+  if (x >= 0 && x < 5) {
+    var y1 = -x +2.5 
+    console.log(y1.toFixed(3));
+  } else if (x >= 5 && x < 10) {
+    var y2 = 2 - 1.5 *(x -3) * (x - 3)
+    console.log(y2.toFixed(3));
+  } else if (x >= 10 && x < 20) {
+    var y3 = x / 2 - 1.5
+    console.log(y3.toFixed(3));
+  }
 </script>
 
-<script xtype="norun" id="ch0104/14">
-
+<script type="norun" id="ch0104/14">
+  var n = Number(prompt('重量为n:'))
+  var y = prompt('是否加急y:')
+  if (n <= 1000) {
+    if(y){
+      var a = 8 + 5
+      console.log(a);
+    }
+    else {
+      console.log(8);
+    }
+  } else if(n > 1000) {
+   if(y) {
+    var b = Math.ceil((n - 1000)/500) * 4 + 8 +5
+    console.log(b);
+   } else {
+    var c = Math.ceil((n - 1000)/500) * 4 + 8 
+    console.log(c);
+   }
+  } 
 </script>
 
-<script xtype="norun" id="ch0104/15">
-
+<script type="norun" id="ch0104/15">
+  var x =Number(prompt('输入x的值:'))
+  var y =Number(prompt('输入y的值:'))
+  var z =Number(prompt('输入z的值:'))
+  if (x > y && x >z) {
+    console.log(x);
+  } else if (y > x && y > z) {
+    console.log(y);
+  } else if (z > x && z > y) {
+    console.log(z);
+  }
 </script>
 
-<script xtype="norun" id="ch0104/16">
-
+<script type="norun" id="ch0104/16">
+  var x =Number(prompt('输入x的值:'))
+  var y =Number(prompt('输入y的值:'))
+  var z =Number(prompt('输入z的值:'))
+  if (x - y < z && x + y >z) {
+    console.log('yes');
+  } else {
+    console.log('no');
+  }
 </script>
 
-<script xtype="norun" id="ch0104/17">
-
+<script type="norun" id="ch0104/17">
+  var year = Number(prompt('请输入年份:'))
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    console.log('Y');
+  } else {
+    console.log('N');
+  }
 </script>
 
-<script xtype="norun" id="ch0104/18">
-
+<script type="norun" id="ch0104/18">
+  var x =Number(prompt('输入x的值:'))
+  var y =Number(prompt('输入y的值:'))
+  if (x <= 1 && x >= -1 && y <= 1 && y >= -1) {
+    console.log('yes');
+  } else {
+    console.log('no');
+  }
 </script>
 
-<script xtype="norun" id="ch0104/19">
-
+<script type="norun" id="ch0104/19">
+  var x =Number(prompt('输入x的值:'))
+  var y =Number(prompt('输入y的值:'))
+  var z =Number(prompt('输入操作符:'))
+  if (z == '+') {
+    var add = x + y
+    console.log(add);
+  } else if (z == '-') {
+    var sub = x - y
+    console.log(sub);
+  } else if (z == '*') {
+    var mul = x * y
+    console.log(mul);
+  } else if (z == '/') {
+    if (y == 0) {
+      console.log('Divided by zero!');
+    }
+    var div = x / y
+    console.log(div);
+  } else {
+    console.log('Invalid operator!');
+  }
 </script>
 
 <script xtype="norun" id="ch0104/20">
+  var a = +prompt('please input a:')
+  var b = +prompt('please input b:')
+  var c = +prompt('please input c:')
 
+  var delta = b * b - 4 * a * c
+  if (delta > 0) {
+    var x1 = (-b + Math.sqrt(delta)) / (2 * a)
+    var x2 = (-b - Math.sqrt(delta)) / (2 * a)
+    console.log(x1);
+    console.log(x2);
+  } else if (delta == 0) {
+    var x = -b / (2 * a)
+    console.log(x);
+  } else if (delta < 0) {
+    var X3 = -b / (2 * a) + (Math.sqrt(delta) / (2 * a))
+    var X4 = -b / (2 * a) - (Math.sqrt(delta) / (2 * a))
+    var a = x3 + 'i'
+    var b = x4 + 'i'
+    console.log('a');
+    console.log('b');
+  }
 </script>
 
 <script xtype="norun" id="ch0104/21">
