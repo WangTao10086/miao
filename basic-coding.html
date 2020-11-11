@@ -366,7 +366,7 @@
   var x =Number(prompt('输入x的值:'))
   var y =Number(prompt('输入y的值:'))
   var z =Number(prompt('输入z的值:'))
-  if (x - y < z && x + y >z) {
+  if (x - y < z && x + y >z && x - z < y && x + z > y && z - y < x && z + y >x) {
     console.log('yes');
   } else {
     console.log('no');
@@ -392,21 +392,21 @@
   }
 </script>
 
-<script type="norun" id="ch0104/19">
-  var x =Number(prompt('输入x的值:'))
-  var y =Number(prompt('输入y的值:'))
-  var z =Number(prompt('输入操作符:'))
-  if (z == '+') {
+<script xtype="norun" id="ch0104/19">
+  var x = Number(prompt('输入x的值:'))
+  var y = Number(prompt('输入y的值:'))
+  var z = Number(prompt('输入操作符:'))
+  if (z = '+') {
     var add = x + y
     console.log(add);
-  } else if (z == '-') {
+  } else if (z = '-') {
     var sub = x - y
     console.log(sub);
-  } else if (z == '*') {
+  } else if (z = '*') {
     var mul = x * y
     console.log(mul);
-  } else if (z == '/') {
-    if (y == 0) {
+  } else if (z = '/') {
+    if (y = 0) {
       console.log('Divided by zero!');
     }
     var div = x / y
@@ -416,27 +416,25 @@
   }
 </script>
 
-<script xtype="norun" id="ch0104/20">
+<script type="norun" id="ch0104/20">
   var a = +prompt('please input a:')
   var b = +prompt('please input b:')
   var c = +prompt('please input c:')
 
   var delta = b * b - 4 * a * c
   if (delta > 0) {
-    var x1 = (-b + Math.sqrt(delta)) / (2 * a)
-    var x2 = (-b - Math.sqrt(delta)) / (2 * a)
+    var x1 = ((-b + Math.sqrt(delta)) / (2 * a)).toFixed(5)
+    var x2 = ((-b - Math.sqrt(delta)) / (2 * a)).toFixed(5)
     console.log(x1);
     console.log(x2);
   } else if (delta == 0) {
-    var x = -b / (2 * a)
+    var x = (-b / (2 * a)).toFixed(5)
     console.log(x);
   } else if (delta < 0) {
-    var X3 = -b / (2 * a) + (Math.sqrt(delta) / (2 * a))
-    var X4 = -b / (2 * a) - (Math.sqrt(delta) / (2 * a))
-    var a = x3 + 'i'
-    var b = x4 + 'i'
-    console.log('a');
-    console.log('b');
+    var x3 = (-b / (2 * a)).toFixed(5) + '+' + (Math.sqrt(delta) / (2 * a)).toFixed(5) + 'i'
+    var x4 = (-b / (2 * a)).toFixed(5) + '-' + (Math.sqrt(delta) / (2 * a)).toFixed(5) + 'i'
+    console.log(x3);
+    console.log(x4);
   }
 </script>
 
