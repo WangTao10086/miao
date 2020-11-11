@@ -497,7 +497,7 @@
   }
 </script>
 
-<script xtype="norun" id="ch0104/20">
+<script type="norun" id="ch0104/20">
   var a = +prompt('please input a:')
   var b = +prompt('please input b:')
   var c = +prompt('please input c:')
@@ -530,4 +530,307 @@
     console.log(result);
   }
   
+</script>
+
+
+
+//1.5 编程基础之循环控制
+
+<script type="norun" id="ch0105/01">
+  var n = Number(prompt('请输入学生人数'))
+  var m = 0
+  var sum = 0
+  while (m < n) {
+    var age = Number(prompt('请输入年龄'))
+    m += 1
+    sum += age
+  }
+  var average = sum / n
+  console.log(average.toFixed(2));
+</script>
+
+<script type="norun" id="ch0105/02">
+  var n = 0
+  var sum = 0
+  while (n < 12) {
+    var remain = Number(prompt('请输入每月结余:'))
+    n++
+    sum += remain
+  }
+  var average = '$' + (sum / n).toFixed(2)
+  console.log(average);
+</script>
+
+<script type="norun" id="ch0105/03">
+  var n = Number(prompt('请输入样本数量'))
+  var i = 0
+  var sum = 0
+  while (i < n) {
+    var data = Number(prompt('样本数据'))
+    i++
+    sum += data
+  }
+  var average = (sum / n).toFixed(4)
+  console.log(average);
+</script>
+
+<script type="norun" id="ch0105/04">
+  var n = Number(prompt('共有多少个整数'))
+  var i = 1
+  var sum = 0
+  while (i <= n) {
+    var num = Number(prompt('请输入值'))
+    i++
+    sum += num
+  }
+  var average = (sum / n).toFixed(5)
+  console.log(sum, average);
+</script>
+
+<script type="norun" id="ch0105/05">
+  var n = Number(prompt('这次考试的人数:'))
+  var max = 0
+  for (var i = 1; i <= n; i++) {
+    var score = Number(prompt('每个学生的成绩:'))
+    if (score > max) {
+      max = score
+    } else if (score < max) {
+      max = max
+    }
+  }
+  console.log(max);
+</script>
+
+<script type="norun" id="ch0105/06">
+  var n = Number(prompt('整数序列的长度:'))
+  var max = 0
+  var min = 0
+  for (var i = 1; i <= n; i++) {
+    var num = Number(prompt('请输入值'))
+    if (num > max) {
+      max = num
+    } else if (num < max) {
+      max = max
+    } else if (min < max) {
+      min = min
+    } 
+  }
+  var sub = max - min
+  console.log(sub);
+</script>
+
+<script type="norun" id="ch0105/07">
+  //不会写
+  var n = Number(prompt('a国参加决赛项目的天数:'))
+  var sum1 = 0
+  var sum2 = 0
+  for (var i = 1; i <= n; i++) {
+    for (var j = 1; j <= n; j++) {
+      var num = Number(prompt('奖牌数'))
+      sum1 += num
+    }
+  }
+</script>
+
+<script type="norun" id="ch0105/08">
+  var n = Number(prompt('n边型'))
+  var sum = 0
+  for (var i = 1; i < n; i++) {
+    var deg = Number(prompt('请输入角度'))
+     sum += deg
+  }
+  remain = (n - 2) * 180 - sum
+  console.log(remain);
+</script>
+
+<script type="norun" id="ch0105/09">
+  var m = Number(prompt('输入小一点的数'))
+  var n = Number(prompt('输入大一点的数'))
+  var sum = 0
+  // debugger
+  for (var i = m; i <= n; i++) {
+    if (i % 2 == 1) {
+      var odd = i
+      sum += odd
+    }
+  }
+  console.log(sum);
+</script>
+
+<script type="norun" id="ch0105/10">
+  var m = Number(prompt('输入小一点的整数'))
+  var n = Number(prompt('输入大一点的整数'))
+  var sum = 0
+  // debugger
+  for (var i = m; i <= n; i++) {
+    if (i % 17 == 0) {
+      var odd = i
+      sum += odd
+    }
+  }
+  console.log(sum);
+</script>
+
+<script type="norun" id="ch0105/11">
+  var k = Number(prompt('输入k个整数'))
+  var a = 0
+  var b = 0
+  var c = 0
+  // debugger
+  for (var i = 1; i <= k; i++) {
+    var num = Number(prompt('输入的数值'))
+    if (num == 1) {
+      a++
+    } else if (num == 5) {
+      b++
+    } else if (num == 10) {
+      c++
+    }
+  }
+  console.log(a, b, c);
+</script>
+
+<script type="norun" id="ch0105/12">
+  var N = Number(prompt('输入整个序列的长度'))
+  var m = Number(prompt('输入指定的数字'))
+  var a = 0
+  for (var i = 1; i <= N; i++) {
+    var num = Number(prompt('请输入n个整数'))
+    if (num == m) {
+      a++
+    }
+  }
+  console.log(a);
+</script>
+
+<script xtype="norun" id="ch0105/13">
+
+</script>
+
+<script xtype="norun" id="ch0105/14">
+
+</script>
+
+<script xtype="norun" id="ch0105/15">
+
+</script>
+
+<script xtype="norun" id="ch0105/16">
+
+</script>
+
+<script xtype="norun" id="ch0105/17">
+
+</script>
+
+<script xtype="norun" id="ch0105/18">
+
+</script>
+
+<script xtype="norun" id="ch0105/19">
+
+</script>
+
+<script xtype="norun" id="ch0105/20">
+
+</script>
+
+<script xtype="norun" id="ch0105/21">
+
+</script>
+
+<script xtype="norun" id="ch0105/22">
+
+</script>
+
+<script xtype="norun" id="ch0105/23">
+
+</script>
+
+<script xtype="norun" id="ch0105/24">
+
+</script>
+
+<script xtype="norun" id="ch0105/25">
+
+</script>
+
+<script xtype="norun" id="ch0105/26">
+
+</script>
+
+<script xtype="norun" id="ch0105/27">
+
+</script>
+
+<script xtype="norun" id="ch0105/28">
+
+</script>
+
+<script xtype="norun" id="ch0105/29">
+
+</script>
+
+<script xtype="norun" id="ch0105/30">
+
+</script>
+
+<script xtype="norun" id="ch0105/31">
+
+</script>
+
+<script xtype="norun" id="ch0105/32">
+
+</script>
+
+<script xtype="norun" id="ch0105/33">
+
+</script>
+
+<script xtype="norun" id="ch0105/34">
+
+</script>
+
+<script xtype="norun" id="ch0105/35">
+
+</script>
+
+<script xtype="norun" id="ch0105/36">
+
+</script>
+
+<script xtype="norun" id="ch0105/37">
+
+</script>
+
+<script xtype="norun" id="ch0105/38">
+
+</script>
+
+<script xtype="norun" id="ch0105/39">
+
+</script>
+
+<script xtype="norun" id="ch0105/40">
+
+</script>
+
+<script xtype="norun" id="ch0105/41">
+
+</script>
+
+<script xtype="norun" id="ch0105/42">
+
+</script>
+
+<script xtype="norun" id="ch0105/43">
+
+</script>
+
+<script xtype="norun" id="ch0105/44">
+
+</script>
+
+<script xtype="norun" id="ch0105/45">
+
 </script>
