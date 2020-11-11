@@ -262,7 +262,7 @@
   }
 </script>
 
-<script xtype="norun" id="ch0104/09">
+<script type="norun" id="ch0104/09">
   //复杂的条件放在前面写
   /*   var n = Number(prompt('请输入一个数为n:'))
     if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
@@ -307,7 +307,7 @@
 </script>
 
 <script type="norun" id="ch0104/10">
-  var a = Number(prompt('该学生的语文成绩:'))
+  /*   var a = Number(prompt('该学生的语文成绩:'))
   var b = Number(prompt('该学生的语文成绩:'))
   if (a < 60 && b < 60) {
     console.log(0);
@@ -315,6 +315,58 @@
     console.log(0);
   } else {
     console.log(1);
+  } */
+
+  //科目很多的时候的写法
+  var a = Number(prompt(':'))
+  var b = Number(prompt(':'))
+  var c = Number(prompt(':'))
+  var d = Number(prompt(':'))
+  var e = Number(prompt(':'))
+  var f = Number(prompt(':'))
+  var g = Number(prompt(':'))
+  //var 不及格数量为 = 0
+
+  var flag = 0
+  if (a < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (b < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (c < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (d < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (e < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (f < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (g < 60) {
+    // 不及格数量 = 不及格数量 + 1
+    flag = flag + 1
+  }
+
+  if (flag === 7) {
+    console.log(1);
+  } else {
+    console.log(0);
   }
 </script>
 
@@ -456,13 +508,24 @@
     var x = (-b / (2 * a)).toFixed(5)
     console.log(x);
   } else if (delta < 0) {
-    var x3 = (-b / (2 * a)).toFixed(5) + '+' + (Math.sqrt(delta) / (2 * a)).toFixed(5) + 'i'
-    var x4 = (-b / (2 * a)).toFixed(5) + '-' + (Math.sqrt(delta) / (2 * a)).toFixed(5) + 'i'
+    var x3 = (-b / (2 * a)).toFixed(5) + '+' + (Math.sqrt(- delta) / (2 * a)).toFixed(5) + 'i'
+    var x4 = (-b / (2 * a)).toFixed(5) + '-' + (Math.sqrt(- delta) / (2 * a)).toFixed(5) + 'i'
     console.log(x3);
     console.log(x4);
   }
 </script>
 
 <script xtype="norun" id="ch0104/21">
-
+  var n = Number(prompt('请输入苹果数量:'))
+  var x = Number(prompt('每x小时吃一个苹果:'))
+  var y = Number(prompt('经过y小时还剩多少苹果:'))
+  //var result = n - Math.ceil(y / x)
+  if (y % x == 0) {
+    var result = n - y / x
+    console.log(result);
+  } else {
+    var result = n - (parseInt(y / x) + 1)
+    console.log(result);
+  }
+  
 </script>
