@@ -432,9 +432,13 @@
   var z =Number(prompt('输入z的值:'))
   if (x > y && x >z) {
     console.log(x);
-  } else if (y > x && y > z) {
+  } 
+
+  if (y > x && y > z) {
     console.log(y);
-  } else if (z > x && z > y) {
+  } 
+
+   if (z > x && z > y) {
     console.log(z);
   }
 </script>
@@ -502,17 +506,14 @@
   if (delta > 0) {
     var x1 = ((-b + Math.sqrt(delta)) / (2 * a)).toFixed(5)
     var x2 = ((-b - Math.sqrt(delta)) / (2 * a)).toFixed(5)
-    console.log(x1);
-    console.log(x2);
+    console.log(x1, x2);
   } else if (delta == 0) {
     var x = (-b / (2 * a)).toFixed(5)
     console.log(x);
   } else if (delta < 0) {
     var x3 = (-b / (2 * a)).toFixed(5) + '+' + (Math.sqrt(-delta) / (2 * a)).toFixed(5) + 'i'
     var x4 = (-b / (2 * a)).toFixed(5) + '-' + (Math.sqrt(-delta) / (2 * a)).toFixed(5) + 'i'
-
-    console.log(x3);
-    console.log(x4);
+    console.log('X1 =' + x3 + ';', 'X2 =' + x3);
   }
 </script>
 
