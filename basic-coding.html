@@ -835,7 +835,7 @@
   console.log(h);
 </script>
 
-<script type="norun" id="ch0105/21">
+<script xtype="norun" id="ch0105/21">
   var n = Number(prompt('输入正整数n'))
   for (var i = 1; i <= Infinity; i++) {
     var str = n
@@ -874,15 +874,18 @@
 
 <script type="norun" id="ch0105/23">
   var m = Number(prompt('每天开始时的药品总量m'))
-      var n = Number(prompt('这天取药的人数n'))
-      var c = 0
-      var sum = 0
-      for (var i = 1; i <= n; i++) { var num=Number(prompt('每个病人希望取走的药的数量')) sum +=num if (sum> 30) {
-        sum = sum - num
-        c = c + 1
-        }
-        }
-        console.log(c);
+  var n = Number(prompt('这天取药的人数n'))
+  var c = 0
+  var sum = 0
+  for (var i = 1; i <= n; i++) {
+    var num = Number(prompt('每个病人希望取走的药的数量'))
+    sum += num
+    if (sum > 30) {
+      sum = sum - num
+      c = c + 1
+    }
+  }
+  console.log(c);
 </script>
 
 <script type="norun" id="ch0105/24">
@@ -950,7 +953,7 @@
 
 </script>
 
-<script xtype="norun" id="ch0105/30">
+<script type="norun" id="ch0105/30">
   var m = Number(prompt('输入整数m'))
   var k = Number(prompt('输入整数k'))
   var num = 0
