@@ -831,11 +831,11 @@
     sum = sum + (h / 2) * 2
     h = h / 2
   }
-  console.log(sum);
+  console.log((sum - h * 2).toFixed(4));
   console.log(h);
 </script>
 
-<script type="norun" id="ch0105/21">
+<script xtype="norun" id="ch0105/21">
   var n = Number(prompt('输入正整数n'))
   for (var i = 1; i <= Infinity; i++) {
     var str = n
@@ -976,7 +976,7 @@
   // while(num < 0)
 </script>
 
-<script xtype="norun" id="ch0105/30">
+<script type="norun" id="ch0105/30">
   var m = Number(prompt('输入整数m'))
   var k = Number(prompt('输入整数k'))
   var num = 0
@@ -998,20 +998,47 @@
   }
 </script>
 
-<script xtype="norun" id="ch0105/31">
+<script type="norun" id="ch0105/31">
 
 </script>
 
-<script xtype="norun" id="ch0105/32">
-
+<script type="norun" id="ch0105/32">
+  var n = Number(prompt('输入整数n'))
+  var q = 2
+  var p = 1
+  var sum = 0
+  // debugger
+  for (var i = 1; i <= n; i++) {
+    sum += q / p
+    var a = p //a相当于将上一个的p值用于下一个数的计算
+    p = q //第一次循环时为2
+    q += a
+  }
+  console.log((sum).toFixed(4));
 </script>
 
-<script xtype="norun" id="ch0105/33">
-
+<script type="norun" id="ch0105/33">
+  var n = Number(prompt('输入整数n'))
+  var sum = 0
+  // debugger
+  for (var i = 1; i <= n; i++) {
+    var x = 1 / i
+    if (i % 2 == 0) {
+      x = -x
+    }
+    sum += x
+  }
+  console.log(sum);
 </script>
 
 <script xtype="norun" id="ch0105/34">
+  var n = Number(prompt('请输入正整数n'))
+  var mul = i
+  var sum
+  for (var i = 1; i <= n; i++) {
+    mul = mul * (i - 1)
 
+  }
 </script>
 
 <script xtype="norun" id="ch0105/35">
