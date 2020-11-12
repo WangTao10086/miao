@@ -832,10 +832,10 @@
     h = h / 2
   }
   console.log((sum - h * 2).toFixed(4));
-  console.log(h);
+  console.log((h).toFixed(6));
 </script>
 
-<script xtype="norun" id="ch0105/21">
+<script type="norun" id="ch0105/21">
   var n = Number(prompt('输入正整数n'))
   for (var i = 1; i <= Infinity; i++) {
     var str = n
@@ -1028,17 +1028,20 @@
     }
     sum += x
   }
-  console.log(sum);
+  console.log((sum).toFixed(4));
 </script>
 
 <script xtype="norun" id="ch0105/34">
-  var n = Number(prompt('请输入正整数n'))
-  var mul = i
-  var sum
-  for (var i = 1; i <= n; i++) {
-    mul = mul * (i - 1)
-
+  var n = Number(prompt("请输入正整数n"))
+  var sum = 0
+  var mul = 1
+  for (var i = n; i > 0; i--) {
+    for (var j = 1; j <= i; j++) {
+      mul *= i
+    }
+    sum += mul
   }
+  console.log(sum)
 </script>
 
 <script xtype="norun" id="ch0105/35">
