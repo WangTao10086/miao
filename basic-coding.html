@@ -703,20 +703,55 @@
   console.log(a);
 </script>
 
-<script xtype="norun" id="ch0105/13">
-
+<script type="norun" id="ch0105/13">
+  var a = Number(prompt('输入a'))
+  var n = Number(prompt('输入n'))
+  var mul = 1
+  for (var i = 1; i <= n; i++) {
+    mul = mul * a
+  }
+  console.log(mul);
 </script>
 
-<script xtype="norun" id="ch0105/14">
-
+<script type="norun" id="ch0105/14">
+  var a = Number(prompt('输入a'))
+  var n = Number(prompt('输入n'))
+  var mul = 1
+  for (var i = 1; i <= n; i++) {
+    mul = mul * (1 + 0.001)
+  }
+  sum = mul * a
+  console.log(sum.toFixed(4));
 </script>
 
-<script xtype="norun" id="ch0105/15">
-
+<script type="norun" id="ch0105/15">
+  var R = Number(prompt('输入R'))
+  var M = Number(prompt('输入M'))
+  var Y = Number(prompt('输入Y'))
+  var mul = 1
+  for (var i = 1; i <= Y; i++) {
+    mul = (1 + R / 100) * mul
+  }
+  var sum = mul * M
+  console.log(parseInt(sum));
 </script>
 
-<script xtype="norun" id="ch0105/16">
-
+<script type="norun" id="ch0105/16">
+  var N = Number(prompt('输入年薪N'))
+  var K = Number(prompt('输入房子增长率K'))
+  var sum = 1
+  // debugger
+  for (var i = 1; i <= 20; i++) {
+    sum = sum * (1 + K / 100)
+    if (200 * sum <= ((i + 1) * N))
+      break
+  }
+  var x = sum * 200 / N - 20
+  if (x < 0) {
+    console.log(Math.ceil(x + 20));
+  } else {
+    console.log('impossible');
+  }
 </script>
 
 <script xtype="norun" id="ch0105/17">
