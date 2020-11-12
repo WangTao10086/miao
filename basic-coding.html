@@ -778,12 +778,13 @@
 </script>
 
 <script type="norun" id="ch0105/17">
+  //迭代式编程技巧
   var k = Number(prompt('输入正整数k'))
   var a = 1
   var b = 1
   var next
   if (k < 3) {
-    next = 1
+    console.log(1);
   } else {
     for (var i = 3; i <= k; i++) {
       next = a + b //
@@ -811,44 +812,138 @@
   }
 </script>
 
-<script xtype="norun" id="ch0105/19">
+<script type="norun" id="ch0105/19">
+  var n = Number(prompt('屋顶数n'))
+  for (var i = 1; i <= n; i++) {
+    var x = Number(prompt('x坐标'))
+    var y = Number(prompt('y坐标'))
+    var num = Number(prompt('人数'))
+    var time = (Math.sqrt(x * x + y * y)) * 2 / 50 + num * 1 + num * 0.5
+  }
+  console.log(Math.ceil(time));
+</script>
+
+<script type="norun" id="ch0105/20">
+  var h = Number(prompt('球的初始高度h:'))
+  var sum = h
+  // debugger
+  for (var i = 1; i <= 10; i++) {
+    sum = sum + (h / 2)*2
+    h = h / 2
+  }
+  console.log(sum);
+  console.log(h);
+</script>
+
+<script type="norun" id="ch0105/21">
+  var n = Number(prompt('输入正整数n'))
+  for (var i = 1; i <= Infinity; i++) {
+    var str = n
+    if (n % 2 == 1) {
+      str = str + '*' + '3' + '+' + '1' + '='
+      n = n * 3 + 1
+      console.log(str + n);
+    }
+    if (n % 2 == 0) {
+      str = n + '/2='
+      n = n / 2
+      console.log(str + n);
+    }
+    if (n == 1) {
+      console.log('end');
+      break
+    }
+  }
+</script>
+
+<script type="norun" id="ch0105/22">
+  <!-- var have = 0
+  var give = 0
+  for (var i = 1; i <= 12; i++) {
+    var bud = number(prompt('请输入每个月的预算'))
+    if (give == 0) {
+      have = 300 - bud
+      for ()
+    } 
+    if ( give == 100) {
+
+    }
+  } -->
 
 </script>
 
-<script xtype="norun" id="ch0105/20">
-
+<script type="norun" id="ch0105/23">
+  var m = Number(prompt('每天开始时的药品总量m'))
+      var n = Number(prompt('这天取药的人数n'))
+      var c = 0
+      var sum = 0
+      for (var i = 1; i <= n; i++) { var num=Number(prompt('每个病人希望取走的药的数量')) sum +=num if (sum> 30) {
+        sum = sum - num
+        c = c + 1
+        }
+        }
+        console.log(c);
 </script>
 
-<script xtype="norun" id="ch0105/21">
-
-</script>
-
-<script xtype="norun" id="ch0105/22">
-
-</script>
-
-<script xtype="norun" id="ch0105/23">
-
-</script>
-
-<script xtype="norun" id="ch0105/24">
-
+<script type="norun" id="ch0105/24">
+  var n = Number(prompt('测量了n小时'))
+  var con = 0
+  var con1 = 0
+  debugger
+  for (var i = 1; i <= n; i++) {
+    var data1 = Number(prompt('测量的数值1'))
+    var data2 = Number(prompt('测量的数值2'))
+    if (data1 >= 90 && data1 <= 140 && data2 >= 60 && data2 <= 90) {
+      con = con + 1
+      if (con > con1) {
+        con1 = con
+      }
+    } else {
+      con = 0
+    }
+  }
+  console.log(con1);
 </script>
 
 <script xtype="norun" id="ch0105/25">
 
 </script>
 
-<script xtype="norun" id="ch0105/26">
-
+<script type="norun" id="ch0105/26">
+  var n = Number(prompt('n个数字'))
+  var z = 0
+  for (var i = 1; i <= n; i++) {
+    var num = Number(prompt('四位数'))
+    var a = parseInt(num / 1000)
+    var b = parseInt(num / 100) - a * 10
+    var c = parseInt(num / 10) - a * 100 - b * 10
+    var d = num - a * 1000 - b * 100 - c * 10
+    if ((d - a - b - c) > 0) {
+      z++
+    }
+  }
+  console.log(z);
 </script>
 
-<script xtype="norun" id="ch0105/27">
-
+<script type="norun" id="ch0105/27">
+  var k = Number(prompt('请输入一个整数k'))
+  var s = 0
+  var m = Infinity
+  for (var n = 1; n <= m; n++) {
+    s += 1 / n
+    if (s > k) {
+      console.log(n);
+      break
+    }
+  }
 </script>
 
-<script xtype="norun" id="ch0105/28">
-
+<script type="norun" id="ch0105/28">
+  var num = Number(prompt('请输入一个数字'))
+  while (num > 0) {
+    console.log(num % 10);
+    num = Math.floor(num / 10)
+  }
 </script>
 
 <script xtype="norun" id="ch0105/29">
@@ -856,7 +951,23 @@
 </script>
 
 <script xtype="norun" id="ch0105/30">
-
+  var m = Number(prompt('输入整数m'))
+  var k = Number(prompt('输入整数k'))
+  var num = 0
+  var n
+  debugger
+  while (m > 0) {
+    m = m % 10
+    m = Math.floor(m / 10)
+    if (m == 3) {
+      num = num + 1
+    }
+  }
+  if (num == k) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
 </script>
 
 <script xtype="norun" id="ch0105/31">
