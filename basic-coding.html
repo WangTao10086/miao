@@ -828,14 +828,14 @@
   var sum = h
   // debugger
   for (var i = 1; i <= 10; i++) {
-    sum = sum + (h / 2)*2
+    sum = sum + (h / 2) * 2
     h = h / 2
   }
   console.log(sum);
   console.log(h);
 </script>
 
-<script xtype="norun" id="ch0105/21">
+<script type="norun" id="ch0105/21">
   var n = Number(prompt('输入正整数n'))
   for (var i = 1; i <= Infinity; i++) {
     var str = n
@@ -949,21 +949,46 @@
   }
 </script>
 
-<script xtype="norun" id="ch0105/29">
+<script type="norun" id="ch0105/29">
+  var num = Number(prompt('请输入数字'))
+  var result = ""
+  if (num > 0) {
+    while (num > 0) {
+      if (num % 10 == 0)
+        result += ""
+      else
+        result += (num % 10)
+      num = Math.floor(num / 10)
+    }
+    console.log(+result)
+  } else {
+    num = -num
+    while (num > 0) {
+      if (num % 10 == 0)
+        result += ""
+      else
+        result += (num % 10)
+      num = Math.floor(num / 10)
+    }
+    console.log(-result)
+  }
 
+  // while(num < 0)
 </script>
 
-<script type="norun" id="ch0105/30">
+<script xtype="norun" id="ch0105/30">
   var m = Number(prompt('输入整数m'))
   var k = Number(prompt('输入整数k'))
   var num = 0
   var n
   debugger
-  while (m > 0) {
-    m = m % 10
-    m = Math.floor(m / 10)
-    if (m == 3) {
-      num = num + 1
+  if (m % 19 == 0) {
+    while (m > 0) {
+      n = m % 10
+      if (n == 3) {
+        num++
+      }
+      m = Math.floor(m / 10)
     }
   }
   if (num == k) {
