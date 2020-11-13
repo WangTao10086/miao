@@ -1133,22 +1133,33 @@
   console.log(sum)
 </script>
 
-<script xtype="norun" id="ch0105/35">
+<script type="norun" id="ch0105/35">
   var n = Number(prompt("请输入正整数n"))
-  var sum = 0
+  var sum = 1 //初始值为1
   var mul = 1 //阶乘的初始值为1
   for (var i = n; i > 0; i--) {
     for (var j = 1; j <= i; j++) {
-      mul *= j
+      mul *= 1 / j
     }
     sum += mul
     mul = 1 //将mul重置为1 再进行外层循环
   }
-  console.log(sum)
+  console.log(sum.toFixed(10))
 </script>
 
-<script xtype="norun" id="ch0105/36">
-
+<script type="norun" id="ch0105/36">
+  var x = Number(prompt('请输入x的值'))
+  var n = Number(prompt('请输入n的值'))
+  var sum = 0
+  var mul = 1
+  for (var i = n; i >= 0; i--) {
+    for (var j = 1; j <= i; j++) {
+      mul *= x
+    }
+    sum += mul
+    mul = 1
+  }
+  console.log(sum.toFixed(2));
 </script>
 
 <script xtype="norun" id="ch0105/37">
