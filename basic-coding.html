@@ -827,49 +827,58 @@
   var h = Number(prompt('球的初始高度h:'))
   var sum = h
   // debugger
-  for (var i = 1; i <= 10; i++) {
-    sum = sum + (h / 2) * 2
-    h = h / 2
+  for (var i = 2; i <= 10; i++) {
+    h = h / 2 //第i次落下的高度
+    sum = sum + h * 2
+
   }
-  console.log((sum - h * 2).toFixed(4));
-  console.log((h).toFixed(6));
+  console.log((sum).toFixed(4));
+  console.log((h / 2).toFixed(6));
 </script>
 
 <script type="norun" id="ch0105/21">
   var n = Number(prompt('输入正整数n'))
   for (var i = 1; i <= Infinity; i++) {
     var str = n
-    if (n % 2 == 1) {
-      str = str + '*' + '3' + '+' + '1' + '='
-      n = n * 3 + 1
-      console.log(str + n);
-    }
-    if (n % 2 == 0) {
-      str = n + '/2='
-      n = n / 2
-      console.log(str + n);
-    }
     if (n == 1) {
       console.log('end');
       break
     }
+    if (n % 2 == 1) {
+      str = str + '*' + '3' + '+' + '1' + '='
+      n = n * 3 + 1
+      console.log(str + n);
+    } else if (n % 2 == 0) {
+      str = n + '/2='
+      n = n / 2
+      console.log(str + n);
+    }
+
   }
 </script>
 
-<script type="norun" id="ch0105/22">
-  <!-- var have = 0
-  var give = 0
+<script xtype="norun" id="ch0105/22">
+  var meoney = 0 //手上的钱
+  var stock = 0 //存的钱
+  var flag = false //表示是否进入了if (meoney < budget )这里面
   for (var i = 1; i <= 12; i++) {
-    var bud = number(prompt('请输入每个月的预算'))
-    if (give == 0) {
-      have = 300 - bud
-      for ()
-    } 
-    if ( give == 100) {
-
+    meoney += 300
+    var budget = Number(prompt('津津预计要花的钱'))
+    if (meoney < budget) {
+      console.log(-i);
+      flag = true
+      break
     }
-  } -->
-
+    meoney = meoney - budget
+    if (meoney >= 100) {
+      var left = moeny % 100 //保留零头 
+      stock += meoney - left //整百数储存起来
+      meoney = left
+    }
+  }
+  if (!flag) {
+    console.log(stock * 1.2 + meoney);
+  }
 </script>
 
 <script type="norun" id="ch0105/23">
@@ -880,7 +889,7 @@
   for (var i = 1; i <= n; i++) {
     var num = Number(prompt('每个病人希望取走的药的数量'))
     sum += num
-    if (sum > 30) {
+    if (sum > m) {
       sum = sum - num
       c = c + 1
     }
@@ -890,26 +899,41 @@
 
 <script type="norun" id="ch0105/24">
   var n = Number(prompt('测量了n小时'))
-  var con = 0
-  var con1 = 0
+  var con = 0 //连续正常的小时数
+  var max = 0 //之前记录的最高小时数
   debugger
   for (var i = 1; i <= n; i++) {
     var data1 = Number(prompt('测量的数值1'))
     var data2 = Number(prompt('测量的数值2'))
     if (data1 >= 90 && data1 <= 140 && data2 >= 60 && data2 <= 90) {
-      con = con + 1
-      if (con > con1) {
-        con1 = con
+      con++
+      if (con > max) {
+        max = con
       }
     } else {
-      con = 0
+      con = 0 //如果血压不正常时,则返回0,再重新进行计数
     }
   }
-  console.log(con1);
+  console.log(max);
 </script>
 
-<script xtype="norun" id="ch0105/25">
-
+<script type="norun" id="ch0105/25">
+  for (var i = 1; i <= 999; i++) {
+    var a7 = i % 7 //九进制的个位数
+    var b7 = (i - a7) / 7 % 7 //七进制的七位数
+    var c7 = (i - a7 - b7 * 7) / 7 / 7 % 7 //七进制的四九位数
+    var a9 = i % 9 //九进制的个位数
+    var b9 = (i - a9) / 9 % 9 //九进制的九位数
+    var c9 = (i - a9 - b9 * 9) / 9 / 9 % 9 //九进制的八一位数
+    //用十进制来理解
+    //var a10 = i % 10 //十进制的个位数
+    //var b10 = (i - a10) / 10 % 10 //十进制的十位数
+    //var c10 = (i - a10 - b10 * 10) / 10 / 10 % 10 //十进制的百位数
+    if (a7 == c9 && b7 == b7 && a9 == c7) {
+      console.log(i, '' + c7 + b7 + a7, '' + c9 + b9 + a9);
+      break
+    }
+  }
 </script>
 
 <script type="norun" id="ch0105/26">
@@ -931,11 +955,12 @@
 <script type="norun" id="ch0105/27">
   var k = Number(prompt('请输入一个整数k'))
   var s = 0
-  var m = Infinity
-  for (var n = 1; n <= m; n++) {
+  //var m = Infinity
+  //for循环里()可以不写
+  for (var n = 1; ; n++) {
     s += 1 / n
     if (s > k) {
-      console.log(n);
+      console.log(n); 
       break
     }
   }
@@ -1031,7 +1056,7 @@
   console.log((sum).toFixed(4));
 </script>
 
-<script xtype="norun" id="ch0105/34">
+<script type="norun" id="ch0105/34">
   var n = Number(prompt("请输入正整数n"))
   var sum = 0
   var mul = 1
