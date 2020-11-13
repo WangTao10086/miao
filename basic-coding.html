@@ -777,8 +777,8 @@
   }
 </script>
 
+<!-- 迭代式编程思想 理解运用  常用 -->
 <script type="norun" id="ch0105/17">
-  //迭代式编程技巧
   var k = Number(prompt('输入正整数k'))
   var a = 1
   var b = 1
@@ -787,9 +787,9 @@
     console.log(1);
   } else {
     for (var i = 3; i <= k; i++) {
-      next = a + b //
-      a = b
-      b = next
+      next = a + b 
+      a = b //把b赋值给a
+      b = next //把此次循环得到的next的值赋值给b 迭代
     }
   }
   console.log(next);
@@ -833,7 +833,7 @@
 
   }
   console.log((sum).toFixed(4));
-  console.log((h / 2).toFixed(6));
+  console.log((h / 2).toFixed(7));
 </script>
 
 <script type="norun" id="ch0105/21">
@@ -857,7 +857,8 @@
   }
 </script>
 
-<script xtype="norun" id="ch0105/22">
+<!-- 理清逻辑  过几天再写一遍 -->
+<script type="norun" id="ch0105/22">
   var meoney = 0 //手上的钱
   var stock = 0 //存的钱
   var flag = false //表示是否进入了if (meoney < budget )这里面
@@ -871,7 +872,7 @@
     }
     meoney = meoney - budget
     if (meoney >= 100) {
-      var left = moeny % 100 //保留零头 
+      var left = meoney % 100 //保留零头 
       stock += meoney - left //整百数储存起来
       meoney = left
     }
@@ -998,7 +999,51 @@
     console.log(-result)
   }
 
-  // while(num < 0)
+//字符串型拼接
+/*   var n = Number(prompt())
+  var isNegative = false
+
+  if (n < 0) {
+    n = -n
+    isNegative = true
+  }
+
+  var result = ''
+
+  do {
+    var digit = n % 10
+    result = result + digit
+    n = (n - digit) / 10
+  } while (n > 0)
+
+  if (isNegative) {
+    console.log('-' + result)
+  } else {
+    console.log(result)
+  } */
+
+//数字型
+/*   var n = Number(prompt())
+  var isNegative = false
+
+  if (n < 0) {
+    n = -n
+    isNegative = true
+  }
+
+  var result = 0
+
+  do {
+    var digit = n % 10
+    result = result * 10 + digit
+    n = (n - digit) / 10
+  } while (n > 0)
+
+  if (isNegative) {
+    console.log(-result)
+  } else {
+    console.log(result)
+  } */
 </script>
 
 <script type="norun" id="ch0105/30">
@@ -1056,15 +1101,16 @@
   console.log((sum).toFixed(4));
 </script>
 
-<script type="norun" id="ch0105/34">
+<script xtype="norun" id="ch0105/34">
   var n = Number(prompt("请输入正整数n"))
   var sum = 0
-  var mul = 1
+  var mul = 1 //阶乘的初始值为1
   for (var i = n; i > 0; i--) {
     for (var j = 1; j <= i; j++) {
-      mul *= i
+      mul *= j
     }
     sum += mul
+    mul = 1 //将mul重置为1 再进行外层循环
   }
   console.log(sum)
 </script>
