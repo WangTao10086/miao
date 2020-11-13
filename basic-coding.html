@@ -837,24 +837,42 @@
 </script>
 
 <script type="norun" id="ch0105/21">
-  var n = Number(prompt('输入正整数n'))
-  for (var i = 1; i <= Infinity; i++) {
-    var str = n
-    if (n == 1) {
-      console.log('end');
-      break
-    }
+  //我的写法:
+  /*   var n = Number(prompt('输入正整数n'))
+    for (var i = 1; i <= Infinity; i++) {
+      var str = n
+      if (n == 1) {
+        console.log('end');
+        break
+      }
+      if (n % 2 == 1) {
+        str = str + '*' + '3' + '+' + '1' + '='
+        n = n * 3 + 1
+        console.log(str + n);
+      } else if (n % 2 == 0) {
+        str = n + '/2='
+        n = n / 2
+        console.log(str + n);
+      }
+    } */
+
+  //更好的写法
+  var n = Number(prompt())
+
+  while (n != 1) {
     if (n % 2 == 1) {
-      str = str + '*' + '3' + '+' + '1' + '='
-      n = n * 3 + 1
-      console.log(str + n);
-    } else if (n % 2 == 0) {
-      str = n + '/2='
-      n = n / 2
-      console.log(str + n);
+      var t = n * 3 + 1
+      console.log(n + '*3+1=' + t)
+      n = t
     }
 
+    if (n % 2 == 0) {
+      var t = n / 2
+      console.log(n + '/2=' + t)
+      n = t
+    }
   }
+  console.log('End')
 </script>
 
 <!-- 理清逻辑  过几天再写一遍 -->
@@ -1101,7 +1119,7 @@
   console.log((sum).toFixed(4));
 </script>
 
-<script xtype="norun" id="ch0105/34">
+<script type="norun" id="ch0105/34">
   var n = Number(prompt("请输入正整数n"))
   var sum = 0
   var mul = 1 //阶乘的初始值为1
@@ -1116,7 +1134,17 @@
 </script>
 
 <script xtype="norun" id="ch0105/35">
-
+  var n = Number(prompt("请输入正整数n"))
+  var sum = 0
+  var mul = 1 //阶乘的初始值为1
+  for (var i = n; i > 0; i--) {
+    for (var j = 1; j <= i; j++) {
+      mul *= j
+    }
+    sum += mul
+    mul = 1 //将mul重置为1 再进行外层循环
+  }
+  console.log(sum)
 </script>
 
 <script xtype="norun" id="ch0105/36">
