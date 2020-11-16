@@ -1,0 +1,15 @@
+<script>
+  // 数组从0开始计数
+  var arr = [4, 6, 1, 5, 2]
+  for (var i = 0; i <= arr.length - 1; i++) { //外层循环管趟数
+    for (var j = 0; j <= arr.length - i - 1; j++) { //内层循环管每一趟交换的次数
+      if (arr[j] > arr[j + 1]) {
+        //内部交换两个变量值 前一个变量值和后一个变量值作比较
+        var temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = temp
+      }
+    }
+  }
+  console.log(arr);
+</script>

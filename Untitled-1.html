@@ -1,0 +1,33 @@
+<script>
+  //接受一个n,判断他是否是奇数
+  var isOdd = function (n) {
+    if (n % 2 == 1) {
+      return true
+    }
+    return false
+  }
+
+  //判断n是否为素数 是的话返回为true 不是的话返回为false
+  var isPrame = function (n) {
+    var sqrt_n = Math.sqrt(n)
+    for (var i = 2; i <= sqrt_n; i++) {
+      if (n % 2 == 0) {
+        return false
+      }
+    }
+    return true
+  }
+
+
+  //返回数值n的十进制位宽
+  var digitWidth = function (n) {
+    var c = 0
+    do {
+      var digit = n % 10
+      c++
+      n = (n - digit) / 10
+    } while (n > 0)
+    return c
+  }
+  digitWidth (10000)
+</script>
