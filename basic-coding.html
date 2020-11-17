@@ -1103,6 +1103,7 @@
     }
     if (light == false) {
       result = result + i + ','
+      console.log(i);
     }
   }
   // console.log(result.slice(0, -1)); //删除最后一个逗号
@@ -1203,10 +1204,10 @@
   }
 </script>
 
-<script type="norun" id="ch0105/39">
+<script xtype="norun" id="ch0105/39">
   var n = Number(prompt('请输入正整数n'))
   var sum = 0
-  console.time('loop')
+  //console.time('loop')
   for (var i = 1; i <= n; i++) {
     if (i % 7 != 0) { //与7无关的数
       var hasBusinessWidth7 = false
@@ -1224,7 +1225,7 @@
       }
     }
   }
-  console.timeEnd('loop') //计算名字为loop的所用时间
+  //console.timeEnd('loop') //计算名字为loop的所用时间
   console.log(sum);
 </script>
 
