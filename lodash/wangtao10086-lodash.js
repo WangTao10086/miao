@@ -14,7 +14,7 @@ var wangtao10086 = function (){
     for(let i = 0;i< size;i++) {
       left.push(array[i])
     }
-    for(var j=array.length-1;j>=size; j--) {
+    for(var j= size;j <= array.length - 1; j++) {
       right.push(array[j])
     }
     result.push(left,right)
@@ -37,8 +37,9 @@ var wangtao10086 = function (){
   //join
   function join(array,seperator) {
     let result = ''
+    let str = String(seperator)
     for(var i = 0;i<array.length - 1;i++) {
-      result += array[i] + seperator
+      result += array[i] + str
     }
     return result + array[i]
   }
@@ -85,6 +86,24 @@ var wangtao10086 = function (){
     return result
   }
   
+  //dropright
+  function dropright(array,n) {
+    var result =[]
+    if(n == 0) {
+      return array
+    }
+    if(!n) {
+      array.pop()
+      return array
+    }
+
+    for(var i = 0; i < array.length - n ;i++) {
+      result.push(array[i])
+    }
+    return result
+  }
+
+
 
 
 
@@ -96,6 +115,8 @@ var wangtao10086 = function (){
     last,
     lastIndexOf,
     drop,
+    dropright,
+
 
   }
 }()
