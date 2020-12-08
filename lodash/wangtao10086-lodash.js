@@ -6,7 +6,10 @@
 
 
 var wangtao10086 = function (){
-  function compact_v1(array) {
+
+
+
+  function compact(array) {
     var result = []
     for(var i = 0;i<array.length;i++) {
       if(!array[i]) {
@@ -23,7 +26,7 @@ var wangtao10086 = function (){
 
 
   return {
-    compact_v1,
+    compact,
 
   }
 }()
