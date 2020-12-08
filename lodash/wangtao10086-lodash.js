@@ -215,7 +215,14 @@ var wangtao10086 = function (){
   }
 
   //sortedIndex
-
+  function sortedIndex(array,value) {
+    for(let i = 0 ; i<array.length;i++ ) {
+      if(array[i] > value) {
+        return i
+      }
+    }
+    return array.length
+  }
 
   //every
 
@@ -240,8 +247,7 @@ var wangtao10086 = function (){
     indexOf,
     initial,
     reverse,
-    
-
+    sortedIndex,
 
 
 
