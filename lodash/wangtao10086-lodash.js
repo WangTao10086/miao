@@ -192,6 +192,34 @@ var wangtao10086 = function (){
   }
 
 
+  //initial
+  function initial(array) {
+    array.pop()
+    return array
+  }
+
+  //reverse
+  function reverse(array) {  //原数组中反序
+    
+    for(let i = 0,j=array.length-1;i<j;i++,j--) {
+      let temp = array[i]
+      array[i] = array[j]
+      array[j] = temp
+    }
+    // var result = []
+    // for(var i = array.length - 1; i>=0 ; i--) {
+    //   result.push(array[i])
+    // }
+    //return result
+    return array
+  }
+
+  //sortedIndex
+
+
+  //every
+
+
 
 
 
@@ -210,5 +238,12 @@ var wangtao10086 = function (){
     fromPairs,
     head,
     indexOf,
+    initial,
+    reverse,
+    
+
+
+
+
   }
 }()
