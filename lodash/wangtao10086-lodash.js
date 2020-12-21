@@ -1,10 +1,4 @@
 
-//v1: 
-//v2:
-//v3:
-
-
-
 var wangtao10086 = function (){
   //chunk
   function chunk(array,size) {
@@ -314,7 +308,7 @@ var wangtao10086 = function (){
     return val
   }
 
-  const identity = it => it
+  // const identity = it => it
 
 
   //mapValues()
@@ -380,7 +374,7 @@ var wangtao10086 = function (){
     identity,
     sumBy,
     mapValues,
-    mapKeys,
+    mapKeys
 
 
 
