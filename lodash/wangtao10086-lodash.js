@@ -140,19 +140,60 @@ var wangtao10086 = function (){
   
 
   //flatten 较少一级array嵌套深度
-  function flatten(array) {
+  function flatten(arrays) {
     var result = []
-    for(var i = 0 ; i<array.length ; i++) {
-      if(Array.isArray(array[i])) {
-        result.push(...array[i])
+    for(var i = 0 ; i<arrays.length ; i++) {
+      if(Array.isArray(arrays[i])) {
+        result.push(...arrays[i])
       } else {
-        result.push(array[i])
+        result.push(arrays[i])
+      }
+    }
+    return result
+
+    //return [].concat(...arrays) 直接得到flatten
+  }
+
+  //flattenDeep 递归为一维数组
+
+  function flattenDeep(arrays) {
+      let result = []
+      for(var i = 0 ; i< arrays.length;i++) {
+        if(Array.isArray(arrays[i])) {
+          result  = result.concat(flattenDeep(arrays[i]))
+        } else {
+          result.push(arrays[i])
+        }
+      }
+      return result
+  }
+
+
+  //flattenDepth
+
+  function flattenDepth(arrays,depth = 1) { //默认值深度为1
+    if(depth == 0) {
+      return arrays.slice()
+    }
+    
+    var result =[]
+    for(var i = 0 ;i<arrays.length;i++) {
+      if(Array.isArray(arrays[i])) {
+        result.push(...flattenDepth(arrays[i],depth-1)) //把里面的数组展平depth - 1 次
+      } else {
+        result.push(arrays[i])
       }
     }
     return result
   }
 
-  //flattenDeep 递归为一维数组
+  function flattenDeep(arrays) {
+    return flattenDepth(arrays,Infinity)
+  }
+
+  function flatten(arrays) {
+    return flattenDepth(arrays,1)
+  }
 
   
   //fromPairs
@@ -225,7 +266,90 @@ var wangtao10086 = function (){
   }
 
   //every
+
+
+  //concat
+  function concat (...values) {
+    var result = []
+    for(var i =0 ; i<values.length;i++) {
+       if(Array.isArray(values[i])) {
+         values[i].forEach(it => {
+           result.push(it)
+         })
+       } else {
+         result.push(values[i])
+       }
+    }
+    return result
+  }
   
+
+  //groupBy()   interator 迭代器 (循环迭代的)  predicate 谓词 (确定某种标准的,做判定的)
+
+  function groupBy(array,predicate = it => it/* predicate = identity */) { //第二个参数不传,就默认是按照其自己分组
+    var result = {}
+
+    for(var i = 0 ; i<array.length;i++) {
+      var key = predicate(array[i],i,array)
+      if(!Array.isArray(result[key])) {
+        result[key] = []
+      }
+      result[key].push(array[i])
+    }
+    return result
+  }
+
+  //sumBy
+  function sumBy(array,predicate = it => it  /* predicate = identity */) {
+    var sum = 0
+    for(var i = 0; i<array.length;i++) {
+      sum += predicate(array[i],i, array)
+    }
+    return sum
+  }
+
+  //identity
+  //identity   用predicate判断标准是会经常用
+  function identity (val) {
+    return val
+  }
+
+  const identity = it => it
+
+
+  //mapValues()
+  function mapValues(obj,mapper) {
+    var result = {}
+    for(var key in obj) {
+      var val = obj[key]
+      result[key] = mapper(val,key,obj)
+    }
+    return result
+  }
+  
+
+  //mapKeys
+  function mapKeys(obj,mapper) {
+    var result = {}
+    for(var key in obj) {
+      var val = obj[key]
+      result[mapper(val,key,obj)] =  val
+    }
+    return result
+  }
+
+  //instanceof
+  function instanceOf(val,Ctor) {
+    if(val == null) {
+      return false 
+    }
+    if(val.__proto__ ==Ctor.prototype) {
+      return true
+    } else {
+      return instanceOf(val.__proto__,Ctor)
+    }
+  }
+
 
 
 
@@ -243,12 +367,21 @@ var wangtao10086 = function (){
     fill,
     findIndex,
     flatten,
+    flattenDeep,
+    flattenDepth,
     fromPairs,
     head,
     indexOf,
     initial,
     reverse,
     sortedIndex,
+    concat,
+    groupBy,
+    identity,
+    sumBy,
+    mapValues,
+    mapKeys,
+    instanceOf,
 
 
 
