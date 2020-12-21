@@ -338,17 +338,17 @@ var wangtao10086 = function (){
     return result
   }
 
-  //instanceof
-  function instanceOf(val,Ctor) {
-    if(val == null) {
-      return false 
-    }
-    if(val.__proto__ ==Ctor.prototype) {
-      return true
-    } else {
-      return instanceOf(val.__proto__,Ctor)
-    }
-  }
+  // //instanceof
+  // function instanceOf(val,Ctor) {
+  //   if(val == null) {
+  //     return false 
+  //   }
+  //   if(val.__proto__ ==Ctor.prototype) {
+  //     return true
+  //   } else {
+  //     return instanceOf(val.__proto__,Ctor)
+  //   }
+  // }
 
 
 
@@ -381,7 +381,6 @@ var wangtao10086 = function (){
     sumBy,
     mapValues,
     mapKeys,
-    instanceOf,
 
 
 
