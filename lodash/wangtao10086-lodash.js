@@ -344,6 +344,69 @@ var wangtao10086 = function (){
   //   }
   // }
 
+  //ary
+  function ary(f,n = f.length) {
+    return function(...args) {
+      return f(args.slice(0,n))
+    }
+  }
+
+  //before
+  function before(n,func) {
+    var c = 0
+    return function(...args) {
+      if(c<n) {
+        var result = func.call(this,...args)
+        c++
+      } else {
+        return result 
+      }
+    }
+  }
+
+
+  //after
+  function after(n,func) {
+    var c = 0
+    return function(...args) {
+      c++
+      if(c>n) {
+        return func.call(this,...args)
+      }
+    }
+  }
+
+
+  //flip
+
+  function  flip(func) {
+    return function(...args) {
+      return func(...args.reverse())
+    }
+  }
+
+  //negate
+  function negate(predicate) {
+    return function(...args) {
+      return !predicate(...args)
+    }
+  }
+
+  //deference  需要被检查的数组  values(...arrays) 排除的值  返回一个过滤后的新数组
+  function difference(array,values) {
+    var result = []
+    var test = [].concat(...values)  //将所有需要被排除的值  组成一个数组
+    for(let val of array) {
+      if(!test.includes(val)) {
+        result.push(val)
+      }
+    }
+    return result
+  }
+
+
+
+
 
 
 
@@ -374,7 +437,14 @@ var wangtao10086 = function (){
     identity,
     sumBy,
     mapValues,
-    mapKeys
+    mapKeys,
+    ary,
+    before,
+    after,
+    flip,
+    negate,
+    difference,
+
 
 
 
