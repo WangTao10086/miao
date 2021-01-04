@@ -382,7 +382,7 @@ var wangtao10086 = function (){
   function  flip(func) {
     return function(...args) {
       return func(...args.reverse())
-    }
+    } 
   }
 
   //negate
@@ -393,7 +393,7 @@ var wangtao10086 = function (){
   }
 
   //deference  需要被检查的数组  values(...arrays) 排除的值  返回一个过滤后的新数组
-  function difference(array,values) {
+  function difference(array,...values) {
     var result = []
     var test = [].concat(...values)  //将所有需要被排除的值  组成一个数组
     for(let val of array) {
@@ -404,6 +404,8 @@ var wangtao10086 = function (){
     return result
   }
 
+
+  //curry
 
 
 
@@ -444,6 +446,7 @@ var wangtao10086 = function (){
     flip,
     negate,
     difference,
+    curry,
 
 
 
