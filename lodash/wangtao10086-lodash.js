@@ -405,7 +405,7 @@ var wangtao10086 = function (){
   }
 
 
-  //curry
+  //differenceBy  
 
 
 
@@ -446,7 +446,6 @@ var wangtao10086 = function (){
     flip,
     negate,
     difference,
-    curry,
 
 
 
