@@ -15,7 +15,7 @@ var wangtao10086 = function (){
 
   //isBoolean
   function isBoolean(value) {
-    return Objecxt.prototype.toString.call(value)  === '[object Boolean]'
+    return Object.prototype.toString.call(value)  === '[object Boolean]'
   }
 
   //isFunction
@@ -43,7 +43,20 @@ var wangtao10086 = function (){
     return Object.prototype.toString.call(value) === '[object Object]' || value != null || Object.prototype.toString.call(value)  ==="[objefct Function]"
   }
 
-  
+  //isObjectLike
+  function isObjectLike(value) {  //typeof(null) 得到'object' typeof(/ffd/)得到也是object
+    return typeof(value) === 'object' && value !== null && Object.prototype.toString.call(value)  !==  '[object RegExp]'
+  }
+
+  //isUndefined 
+  function isUndefined(value) {
+    return typeof(value) === 'undefined'
+  }
+
+  //isRegExp
+  function isRegExp(value) {
+    return Object.prototype.toString.call(value) === '[object RegExp]~'
+  }
 
 
   //isNaN
@@ -514,6 +527,11 @@ var wangtao10086 = function (){
     isNaN,
     isNull,
     isObject,
+    isObjectLike,
+    isUndefined,
+    isRegExp,
+
+
 
 
 
