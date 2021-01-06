@@ -1,5 +1,60 @@
 
 var wangtao10086 = function (){
+
+  //类型判断如下 以及一些lodash自带的类型判断
+
+  //isArguments arguments 类数组对象 类似于array 处理length属性和索引元素之外未加任何属性(forEach()方法可用)  可以直接将他转化为数组Array.prototype.slice.call(arguments)
+  function isArguments(value) {
+    return Object.prototype.toString.call(value) === '[object Arguments]'
+  }
+
+  //isArray
+  function isArray(value) {
+    return Object.prototype.toString.call(value) ==='[object Array]'
+  }
+
+  //isBoolean
+  function isBoolean(value) {
+    return Objecxt.prototype.toString.call(value)  === '[object Boolean]'
+  }
+
+  //isFunction
+  function isFunction(value) {
+    return Object.prototype.toString.call(value) === '[object Function]'
+  }
+
+  //isString
+  function isString(value) {
+    return Object.prototype.toString.call(value) === '[object String]'
+  }
+
+  //isNumber 
+  function isNumber(value) {
+    return Object.prototype.toString.call(value) === '[object Number]'
+  }
+
+  //isNull
+  function isNull(value) {
+    return Object.prototype.toString.call(value) === '[object Null]'
+  }
+
+  //isObject
+  function isObject(value) {
+    return Object.prototype.toString.call(value) === '[object Object]' || value != null || Object.prototype.toString.call(value)  ==="[objefct Function]"
+  }
+
+  
+
+
+  //isNaN
+  function isNaN(value) {
+    if(isNumber(value)) {
+      var val = value.valueOf()
+    }
+    return val != val
+  }
+    
+
   //chunk
   function chunk(array,size) {
     let left = []
@@ -81,7 +136,7 @@ var wangtao10086 = function (){
   }
   
   //dropright
-  function dropright(array,n) {
+  function dropRight(array,n) {
     var result =[]
     if(n == 0) {
       return array
@@ -406,7 +461,10 @@ var wangtao10086 = function (){
 
 
   //differenceBy  
-
+  function differenceBy(array,...values) {
+    var result = []
+    var test = [].concat(...values) 
+  }
 
 
 
@@ -422,7 +480,7 @@ var wangtao10086 = function (){
     last,
     lastIndexOf,
     drop,
-    dropright,
+    dropRight,
     fill,
     findIndex,
     flatten,
@@ -446,6 +504,18 @@ var wangtao10086 = function (){
     flip,
     negate,
     difference,
+    differenceBy,
+    isArguments,
+    isArray,
+    isBoolean,
+    isFunction,
+    isString,
+    isNumber,
+    isNaN,
+    isNull,
+    isObject,
+
+
 
 
 
